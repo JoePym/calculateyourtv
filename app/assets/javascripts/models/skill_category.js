@@ -1,3 +1,3 @@
-RosterCreator.SkillCategory = DS.Model.extend({
+CalculateYourTV.SkillCategory = DS.Model.extend({
   name: DS.attr('string')
 });

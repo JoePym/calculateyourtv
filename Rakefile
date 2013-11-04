@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Calculateyourtv::Application.load_tasks
+CalculateYourTV::Application.load_tasks

@@ -15,13 +15,13 @@
      "Regeneration", "Right Stuff", "Secret Weapon", "Stab", "Stakes", "Stunty", "Take Root", "Throw Team-Mate",
      "Titchy", "Wild Animal"]
   }
-  RosterCreator.Skill.FIXTURES = [];
-  RosterCreator.SkillCategory.FIXTURES = [];
+  CalculateYourTV.Skill.FIXTURES = [];
+  CalculateYourTV.SkillCategory.FIXTURES = [];
   for(var i = 0; i < skillCategories.length; i++){
-    var cat = RosterCreator.SkillCategory.FIXTURES.push({id: i + 1, name: skillCategories[i]});
+    var cat = CalculateYourTV.SkillCategory.FIXTURES.push({id: i + 1, name: skillCategories[i]});
     lcName = skillCategories[i].toLowerCase();
     for(var j = 0; j < skillList[lcName].length; j++){
-      RosterCreator.Skill.FIXTURES.push({id: j + 1, skillCategory: i + 1, name: skillList[lcName][j]});
+      CalculateYourTV.Skill.FIXTURES.push({id: j + 1, skillCategory: i + 1, name: skillList[lcName][j]});
     }
   }
 })()

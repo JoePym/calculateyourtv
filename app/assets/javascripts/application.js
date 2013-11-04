@@ -12,14 +12,14 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require handlebars
 //= require ember
 //= require ember-data
+//= require twitter/bootstrap
 //= require_self
 //= require calculateyourtv
 
 // for more details see: http://emberjs.com/guides/application/
-Calculateyourtv = Ember.Application.create();
+CalculateYourTV = Ember.Application.create();
 
 //= require_tree .

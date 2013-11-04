@@ -1,5 +1,7 @@
 // For more information see: http://emberjs.com/guides/routing/
 
-Calculateyourtv.Router.map(function() {
-  // this.resource('posts');
+CalculateYourTV.Router.map(function() {
+  this.resource('rosters', function() {
+    this.resource('roster', { path: ':roster_id' });
+  });
 });

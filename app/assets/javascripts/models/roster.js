@@ -1,6 +1,8 @@
-RosterCreator.Roster = DS.Model.extend({
-  name: DS.attr('string'),
-  logoPath: DS.attr('string'),
-  rerollCost: DS.attr("integer"),
-  allowApothecary: DS.attr("boolean")
+CalculateYourTV.Roster = DS.Model.extend({
+  name: DS.attr(),
+  logoPath: DS.attr(),
+  rerollCost: DS.attr(),
+  allowApothecary: DS.attr(),
+  teams: DS.hasMany("team"),
+  positions: DS.hasMany("position")
 });
