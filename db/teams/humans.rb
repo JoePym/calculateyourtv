@@ -2,26 +2,26 @@ humans = Roster.create(:name => "Humans", :reroll_cost => 50, :logo_path => "hum
 
 puts "adding positionals to Humans"
 ogre = humans.positions.create(:name => "Ogre",
-  :mv => 5, :st => 5, :ag => 2, :av => 9, 
+  :mv => 5, :st => 5, :ag => 2, :av => 9,
   :default_skills => ["Loner", "Mighty Blow", "Bonehead", "Thick Skull", "Throw Team Mate"],
   :normal_skills => ["strength"], :double_skills => ["general", "passing", "agility"],
   :maximum => 1,:cost => 140)
 blitzer = humans.positions.create(:name => "Blitzer",
   :mv => 7, :st => 3, :ag => 3, :av => 8,
-  :default_skills => ["Block"], 
+  :default_skills => ["Block"],
   :normal_skills => ["general", "strength"], :double_skills => ["passing", "agility"],
-  :cost => 100, :journeyman_position => false, :maximum => 4)
+  :cost => 90, :journeyman_position => false, :maximum => 4)
 thrower = humans.positions.create(:name => "Thrower",
   :mv => 6, :st => 3, :ag => 3, :av => 8,
   :normal_skills => ["general", "passing"], :double_skills => ["strength", "agility"],
-  :default_skills => ["Pass", "Sure Hands"], :maximum => 2,:cost => 90)
+  :default_skills => ["Pass", "Sure Hands"], :maximum => 2,:cost => 70)
 catcher = humans.positions.create(:name => "Catcher",
-  :mv => 8, :st => 2, :ag => 3, :av => 7, 
+  :mv => 8, :st => 2, :ag => 3, :av => 7,
   :default_skills => ["Catch", "Dodge"],
   :normal_skills => ["general", "agility"], :double_skills => ["strength", "passing"],
   :maximum => 4,:cost => 70)
 lineman = humans.positions.create(:name => "Lineman",
-  :mv => 6, :st => 3, :ag => 3, :av => 8, 
+  :mv => 6, :st => 3, :ag => 3, :av => 8,
   :default_skills => [],
   :normal_skills => ["general"], :double_skills => ["strength", "passing", "agility"],
   :maximum => 16,:cost => 50, :journeyman_position => true)
