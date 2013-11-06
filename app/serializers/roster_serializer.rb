@@ -5,12 +5,14 @@ class RosterSerializer < ActiveModel::Serializer
   attributes :id, :name, :reroll_cost, :logo_path, :allow_apo
   embed :ids, include: true
 
-  has_many :positions
-  has_many :teams
+  has_many :positions, key: :positions
+  has_many :teams, key: :teams
 
   def logo_path
     "assets" + asset_path(object.logo_path)
   end
+
+
 end
 
 

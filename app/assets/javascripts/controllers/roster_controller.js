@@ -1,3 +1,7 @@
-CalculateYourTV.RostersController = Ember.ArrayController.extend({
+CalculateYourTV.RostersIndexController = Ember.ArrayController.extend({
+
+});
+
+CalculateYourTV.RostersShowController = Ember.ObjectController.extend({
 
 });

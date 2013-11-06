@@ -3,21 +3,21 @@ amazons.update_attributes(:reroll_cost => 50, :logo_path => "amazon_logo.png")
 
 puts "adding positionals to Amazons"
 blitzer = amazons.positions.create(:name => "Blitzer",
-  :mv => 6, :st => 3, :ag => 3, :av => 7,
-  :default_skills => ["Block", "Dodge"], 
+  :ma => 6, :st => 3, :ag => 3, :av => 7,
+  :default_skills => ["Block", "Dodge"],
   :normal_skills => ["general", "strength"], :double_skills => ["passing", "agility"],
   :cost => 90, :journeyman_position => false, :maximum => 4)
 catcher = amazons.positions.create(:name => "Catcher",
-  :mv => 6, :st => 3, :ag => 3, :av => 7,
+  :ma => 6, :st => 3, :ag => 3, :av => 7,
   :normal_skills => ["agility", "general"], :double_skills => ["passing", "strength"],
   :default_skills => ["Dodge", "Catch"], :maximum => 2,:cost => 70)
 thrower = amazons.positions.create(:name => "Thrower",
-  :mv => 6, :st => 3, :ag => 3, :av => 7, 
+  :ma => 6, :st => 3, :ag => 3, :av => 7,
   :default_skills => ["Dodge", "Pass"],
   :normal_skills => ["passing", "general"], :double_skills => ["strength", "agility"],
   :maximum => 2,:cost => 70)
 linewoman = amazons.positions.create(:name => "Linewoman",
-  :mv => 6, :st => 3, :ag => 3, :av => 7, 
+  :ma => 6, :st => 3, :ag => 3, :av => 7,
   :default_skills => ["Dodge"],
   :normal_skills => ["general"], :double_skills => ["strength", "agility"],
   :maximum => 16,:cost => 50, :journeyman_position => true)

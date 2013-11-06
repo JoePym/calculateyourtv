@@ -5,6 +5,6 @@ class Api::V1::RostersController < ApplicationController
   end
 
   def show
-    respond_with Roster.find(params[:id])
+    render json: Roster.includes(teams: :players).find(params[:id])
   end
 end

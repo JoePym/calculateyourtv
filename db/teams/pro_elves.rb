@@ -2,21 +2,21 @@ pro_elves = Roster.create(:name => "Pro Elves", :reroll_cost => 50, :logo_path =
 
 puts "adding positionals to Dark Elves"
 catcher = pro_elves.positions.create(:name => "Catcher",
-  :mv => 8, :st => 3, :ag => 4, :av => 7,
-  :default_skills => ["Catch", "Nerves of Steel"], 
+  :ma => 8, :st => 3, :ag => 4, :av => 7,
+  :default_skills => ["Catch", "Nerves of Steel"],
   :normal_skills => ["general", "agility"], :double_skills => ["strength", "passing"],
   :cost => 100, :journeyman_position => false, :maximum => 4)
 blitzer = pro_elves.positions.create(:name => "Blitzer",
-  :mv => 7, :st => 3, :ag => 4, :av => 8,
-  :default_skills => ["Block", "Side Step"], 
+  :ma => 7, :st => 3, :ag => 4, :av => 8,
+  :default_skills => ["Block", "Side Step"],
   :normal_skills => ["general", "agility"], :double_skills => ["strength", "passing"],
   :cost => 110, :journeyman_position => false, :maximum => 2)
 thrower = pro_elves.positions.create(:name => "Thrower",
-  :mv => 6, :st => 3, :ag => 4, :av => 7,
+  :ma => 6, :st => 3, :ag => 4, :av => 7,
   :normal_skills => ["agility", "general", "passing"], :double_skills => ["strength"],
   :default_skills => ["Pass"], :maximum => 2,:cost => 70)
 lineelf = pro_elves.positions.create(:name => "Lineman",
-  :mv => 6, :st => 3, :ag => 4, :av => 7, 
+  :ma => 6, :st => 3, :ag => 4, :av => 7,
   :default_skills => [],
   :normal_skills => ["general", "agility"], :double_skills => ["strength", "passing"],
   :maximum => 16,:cost => 60, :journeyman_position => true)
@@ -37,7 +37,7 @@ names = [
 "Stardash",
 "Warglow",
 "Wildseed",
-"Woodbeak", 
+"Woodbeak",
 "Warpaw"
 ]
 team.roster = pro_elves

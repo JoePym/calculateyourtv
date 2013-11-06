@@ -1,0 +1,9 @@
+<h1> List Rosters </h1>
+{{#each}}
+  {{#link-to "rosters.show" this}}
+    <div class="col-md-2">
+      <img {{bindAttr src="logo_path"}}>
+      <p>{{name}}</p>
+    </div>
+  {{/link-to}}
+{{/each}}

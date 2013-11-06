@@ -3,20 +3,20 @@ chaos_dwarves = Roster.create(:name => "Chaos Dwarves", :reroll_cost => 60, :log
 
 puts "adding positionals to Chaos Dwarves"
 hob = chaos_dwarves.positions.create(:name => "Hobgoblin",
-  :mv => 6, :st => 3, :ag => 3, :av => 7,
-  :default_skills => [], 
+  :ma => 6, :st => 3, :ag => 3, :av => 7,
+  :default_skills => [],
   :normal_skills => ["general"], :double_skills => ["passing", "agility", "strength"],
   :cost => 40, :journeyman_position => true, :maximum => 16)
 cd = chaos_dwarves.positions.create(:name => "Chaos Dwarf Blocker",
-  :mv => 4, :st => 3, :ag => 2, :av => 9,
+  :ma => 4, :st => 3, :ag => 2, :av => 9,
   :normal_skills => ["strength", "general"], :double_skills => ["passing", "agility", "mutation"],
   :default_skills => [ "Block", "Tackle", "Thick Skull" ], :maximum => 6,:cost => 70)
 bull = chaos_dwarves.positions.create(:name => "Bull Centaur",
-  :mv => 6, :st => 4, :ag => 2, :av => 9,
+  :ma => 6, :st => 4, :ag => 2, :av => 9,
   :normal_skills => ["strength", "general"], :double_skills => ["passing", "agility", "mutation"],
   :default_skills => ["Sprint", "Sure Feet", "Thick Skull" ], :maximum => 2,:cost => 130)
 mino = chaos_dwarves.positions.create(:name => "Minotaur",
-  :mv => 5, :st => 5, :ag => 2, :av => 8, 
+  :ma => 5, :st => 5, :ag => 2, :av => 8,
   :default_skills => ["Frenzy", "Mighty Blow", "Thick Skull", "Horns", "Loner", "Wild Animal"],
   :normal_skills => ["strength", "mutation"], :double_skills => ["general", "passing", "agility"],
   :maximum => 1,:cost => 150)

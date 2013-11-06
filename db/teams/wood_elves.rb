@@ -3,24 +3,24 @@ wood_elves = Roster.create(:name => "Wood Elves", :reroll_cost => 50, :logo_path
 
 puts "adding positionals to Wood Elves"
 tree = wood_elves.positions.create(:name => "Treeman",
-  :mv => 2, :st => 6, :ag => 1, :av => 10, 
+  :ma => 2, :st => 6, :ag => 1, :av => 10,
   :default_skills => ["Loner", "Mighty Blow", "Stand Firm", "Strong Arm", "Take Root", "Thick Skull", "Throw Team-Mate" ],
   :normal_skills => ["strength"], :double_skills => ["general", "passing", "agility"],
   :maximum => 1,:cost => 120)
 wardancer = wood_elves.positions.create(:name => "Wardancer",
-  :mv => 8, :st => 3, :ag => 4, :av => 7,
+  :ma => 8, :st => 3, :ag => 4, :av => 7,
   :normal_skills => ["agility", "general"], :double_skills => ["passing", "strength"],
   :default_skills => ["Block", "Dodge", "Leap" ], :maximum => 2,:cost => 120, :journeyman_position => false)
 thrower = wood_elves.positions.create(:name => "Thrower",
-  :mv => 7, :st => 3, :ag => 4, :av => 7,
+  :ma => 7, :st => 3, :ag => 4, :av => 7,
   :normal_skills => ["agility", "general", "passing"], :double_skills => ["strength"],
   :default_skills => ["Pass"], :maximum => 2,:cost => 90, :journeyman_position => false)
 catcher = wood_elves.positions.create(:name => "Catcher",
-  :mv => 8, :st => 2, :ag => 4, :av => 7,
+  :ma => 8, :st => 2, :ag => 4, :av => 7,
   :normal_skills => ["agility", "general"], :double_skills => ["passing", "strength"],
   :default_skills => ["Dodge","Catch", "Sprint"], :maximum => 4,:cost => 90, :journeyman_position => false)
 lineman = wood_elves.positions.create(:name => "Lineman",
-  :mv => 7, :st => 3, :ag => 4, :av => 7,
+  :ma => 7, :st => 3, :ag => 4, :av => 7,
   :normal_skills => ["agility", "general"], :double_skills => ["passing", "strength"],
   :default_skills => [], :maximum => 16,:cost => 70, :journeyman_position => true)
 

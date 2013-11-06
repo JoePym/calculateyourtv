@@ -4,8 +4,14 @@ CalculateYourTV.IndexRoute = Ember.Route.extend({
   }
 });
 
-CalculateYourTV.RostersRoute = Ember.Route.extend({
+CalculateYourTV.RostersIndexRoute = Ember.Route.extend({
   setupController: function(controller) {
     controller.set('model', this.store.findAll('roster'));
+  }
+});
+
+CalculateYourTV.RosterRoute = Ember.Route.extend({
+  setupController: function(controller, roster) {
+    controller.set('model', roster);
   }
 });

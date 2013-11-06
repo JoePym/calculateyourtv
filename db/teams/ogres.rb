@@ -3,12 +3,12 @@ ogres = Roster.create(:name => "Ogres", :reroll_cost => 70, :logo_path => "ogre_
 
 puts "adding positionals to Ogres"
 ogre = ogres.positions.create(:name => "Ogre",
-  :mv => 5, :st => 5, :ag => 2, :av => 9, 
+  :ma => 5, :st => 5, :ag => 2, :av => 9,
   :default_skills => ["Bone-head", "Mighty Blow", "Thick Skull", "Throw Team-Mate"],
   :normal_skills => ["strength"], :double_skills => ["general", "passing", "agility"],
   :maximum => 6,:cost => 140)
 snotling = ogres.positions.create(:name => "Snotling",
-  :mv => 5, :st => 1, :ag => 3, :av => 5,
+  :ma => 5, :st => 1, :ag => 3, :av => 5,
   :normal_skills => ["agility"], :double_skills => ["passing", "general", "strength"],
   :default_skills => ["Dodge", "Right Stuff", "Side Step", "Stunty", "Titchy" ], :maximum => 16,:cost => 20, :journeyman_position => true)
 

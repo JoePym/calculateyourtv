@@ -2,6 +2,6 @@
 
 CalculateYourTV.Router.map(function() {
   this.resource('rosters', function() {
-    this.resource('roster', { path: ':roster_id' });
+    this.route('show', { path: ':roster_id' });
   });
 });

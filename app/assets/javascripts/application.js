@@ -21,5 +21,4 @@
 
 // for more details see: http://emberjs.com/guides/application/
 CalculateYourTV = Ember.Application.create();
-
 //= require_tree .

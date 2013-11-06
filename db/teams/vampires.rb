@@ -3,12 +3,12 @@ vampires = Roster.create(:name => "Vampires", :reroll_cost => 70, :logo_path => 
 
 puts "adding positionals to Vampires"
 vampire = vampires.positions.create(:name => "Vampire",
-  :mv => 6, :st => 4, :ag => 4, :av => 8, 
+  :ma => 6, :st => 4, :ag => 4, :av => 8,
   :default_skills => ["Regeneration", "Hypnotic Gaze", "Blood Lust"],
   :normal_skills => ["strength", "general", "agility"], :double_skills => ["passing"],
   :maximum => 6,:cost => 110)
 thrall = vampires.positions.create(:name => "Thrall",
-  :mv => 6, :st => 3, :ag => 3, :av => 7,
+  :ma => 6, :st => 3, :ag => 3, :av => 7,
   :normal_skills => ["general"], :double_skills => ["passing", "agility", "strength"],
   :default_skills => [ ], :maximum => 16,:cost => 40, :journeyman_position => true)
 
@@ -28,7 +28,7 @@ names =[
 "Libniko",
 "Ramung",
 "Philipps",
-"Sigric", 
+"Sigric",
 "Gerunch"
 ]
 4.times do |i|

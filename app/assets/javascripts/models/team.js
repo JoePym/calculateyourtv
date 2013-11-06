@@ -5,7 +5,7 @@ CalculateYourTV.Team = DS.Model.extend({
   rerolls: DS.attr(),
   assistant_coaches: DS.attr(),
   cheerleaders: DS.attr(),
-  apothecary: DS.attr(),
-  fanFactor: DS.attr(),
+  apo: DS.attr(),
+  fanfactor: DS.attr(),
   gold: DS.attr()
 });

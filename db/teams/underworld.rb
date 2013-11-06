@@ -2,26 +2,26 @@ underworld = Roster.create(:name => "Under-world", :reroll_cost => 60, :logo_pat
 
 puts "adding positionals to Underworld"
 troll = underworld.positions.create(:name => "Warpstone Troll",
-  :mv => 4, :st => 5, :ag => 1, :av => 9,
+  :ma => 4, :st => 5, :ag => 1, :av => 9,
   :default_skills => ["Loner", "Always Hungry", "Mighty Blow", "Really Stupid", "Regeneration", "Throw Team-Mate"],
   :normal_skills => ["strength", "mutation"], :double_skills => ["general", "passing", "agility"],
   :maximum => 1,:cost => 110)
 blitzer = underworld.positions.create(:name => "Skaven Blitzer",
-  :mv => 7, :st => 3, :ag => 3, :av => 8,
+  :ma => 7, :st => 3, :ag => 3, :av => 8,
   :default_skills => ["Block"],
   :normal_skills => ["general", "strength", "mutation"], :double_skills => ["passing", "agility"],
   :cost => 90, :journeyman_position => false, :maximum => 2)
 thrower = underworld.positions.create(:name => "Skaven Thrower",
-  :mv => 7, :st => 3, :ag => 3, :av => 7,
+  :ma => 7, :st => 3, :ag => 3, :av => 7,
   :normal_skills => ["general", "passing", "mutation"], :double_skills => ["strength", "agility"],
   :default_skills => ["Pass, Sure Hands"], :maximum => 2,:cost => 70)
 lineman = underworld.positions.create(:name => "Skaven Lineman",
-  :mv => 7, :st => 3, :ag => 3, :av => 7,
+  :ma => 7, :st => 3, :ag => 3, :av => 7,
   :default_skills => [],
   :normal_skills => ["general", "mutation"], :double_skills => ["strength", "passing", "agility"],
   :maximum => 2,:cost => 50)
 goblin = underworld.positions.create(:name => "Underworld Goblin",
-  :mv => 6, :st => 2, :ag => 3, :av => 7,
+  :ma => 6, :st => 2, :ag => 3, :av => 7,
   :default_skills => ["Dodge", "Stunty"],
   :normal_skills => ["agility", "mutation"], :double_skills => ["strength", "passing", "general"],
   :maximum => 16,:cost => 40, :journeyman_position => true)

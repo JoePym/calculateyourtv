@@ -2,21 +2,21 @@ high_elves = Roster.create(:name => "High Elves", :reroll_cost => 50, :logo_path
 
 puts "adding positionals to High Elves"
 blitzer = high_elves.positions.create(:name => "Blitzer",
-  :mv => 7, :st => 3, :ag => 4, :av => 8,
-  :default_skills => ["Block"], 
+  :ma => 7, :st => 3, :ag => 4, :av => 8,
+  :default_skills => ["Block"],
   :normal_skills => ["general", "agility"], :double_skills => ["strength", "passing"],
   :cost => 100, :journeyman_position => false, :maximum => 2)
 thrower = high_elves.positions.create(:name => "Thrower",
-  :mv => 6, :st => 3, :ag => 4, :av => 8,
+  :ma => 6, :st => 3, :ag => 4, :av => 8,
   :normal_skills => ["agility", "general", "passing"], :double_skills => ["strength"],
   :default_skills => ["Pass", "Safe Throw"], :maximum => 2,:cost => 90)
 catcher = high_elves.positions.create(:name => "Catcher",
-  :mv => 8, :st => 3, :ag => 4, :av => 7, 
+  :ma => 8, :st => 3, :ag => 4, :av => 7,
   :default_skills => ["Catch"],
   :normal_skills => ["general", "agility"], :double_skills => ["strength", "passing"],
   :maximum => 4,:cost => 90)
 lineelf = high_elves.positions.create(:name => "Lineman",
-  :mv => 6, :st => 3, :ag => 4, :av => 8, 
+  :ma => 6, :st => 3, :ag => 4, :av => 8,
   :default_skills => [],
   :normal_skills => ["general", "agility"], :double_skills => ["strength", "passing"],
   :maximum => 16,:cost => 70, :journeyman_position => true)
@@ -47,7 +47,7 @@ end
 end
 2.times do |i|
   team.players.create(:name => names[3+i], :position => catcher, :number => 4 + i)
-end  
+end
 6.times do |i|
   team.players.create(:name => names[5+i], :position => lineelf, :number => 6+ i)
 end
