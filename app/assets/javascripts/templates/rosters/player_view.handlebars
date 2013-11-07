@@ -7,9 +7,16 @@
     <td>{{view.content.position.st}}</td>
     <td>{{view.content.position.ag}}</td>
     <td>{{view.content.position.av}}</td>
-    <td></td>
+    <td>
+      {{#each skill in view.content.position.skills}}
+        <span class="label label-default">{{skill.name}}</span>
+      {{/each}}
+    </td>
     <td>{{view.content.position.cost}}</td>
-    <td><a {{action "toggleVisibility" target="view" bubbles=false}}>Edit</a></td>
+    <td>
+      <a {{action "toggleVisibility" target="view"}}>Edit</a>
+      <a {{action "removePlayer" target="view"}}>Delete</a>
+    </td>
   {{else}}
     <td>{{view.content.number}}</td>
     <td>{{input type="text" value=view.content.name}}</td>
@@ -26,8 +33,12 @@
     <td>{{view.content.position.st}}</td>
     <td>{{view.content.position.ag}}</td>
     <td>{{view.content.position.av}}</td>
-    <td></td>
+    <td>
+      {{#each skill in view.content.position.skills}}
+        <span class="label label-default">{{skill.name}}</span>
+      {{/each}}
+    </td>
     <td>{{view.content.position.cost}}</td>
-    <td><a {{action "toggleVisibility" target="view" bubbles=false}}>Done</a></td>
+    <td><a {{action "toggleVisibility" target="view"}}>Done</a></td>
   {{/if}}
 </tr>

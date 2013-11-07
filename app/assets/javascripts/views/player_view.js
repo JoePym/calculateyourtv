@@ -5,6 +5,9 @@ CalculateYourTV.PlayerView = Ember.View.extend({
   actions: {
     toggleVisibility: function(){
       this.toggleProperty('isShowVisible');
+    },
+    removePlayer: function(){
+      this.get("controller").send("removePlayer", this.content)
     }
   }
 });
