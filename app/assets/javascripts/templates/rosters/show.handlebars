@@ -1,20 +1,7 @@
 {{#each teams}}
   <h1>{{name}}</h1>
   <table class="table table-bordered">
-    <tr>
-      <th>Rerolls</th>
-      <th>Assistant Coaches</th>
-      <th>Cheerleaders</th>
-      <th>Apothecary</th>
-      <th>Gold</th>
-    </tr>
-    <tr>
-      <td>{{input type="number" value=rerolls size="2"}}</td>
-      <td>{{input type="number" value=assistant_coaches size="2"}}</td>
-      <td>{{input type="number" value=cheerleaders size="2"}}</td>
-      <td>{{input type="checkbox" class="toggle" checked=apo}}</td>
-      <td>{{input type="number" value=gold size="6"}}</td>
-    </tr>
+    {{partial "rosters/team_attributes"}}
   </table>
   <table class="table table-bordered">
     <tr>
@@ -29,39 +16,7 @@
       <th>Cost</th>
       <th></th>
     </tr>
-    {{#each players}}
-      <tr>
-        <td>{{number}}</td>
-        <td>{{name}}</td>
-        <td>{{position.name}}</td>
-        <td>{{position.ma}}</td>
-        <td>{{position.st}}</td>
-        <td>{{position.ag}}</td>
-        <td>{{position.av}}</td>
-        <td></td>
-        <td>{{position.cost}}</td>
-        <td>edit</td>
-      </tr>
-      <tr>
-        <td>{{number}}</td>
-        <td>{{input type="text" value=name}}</td>
-        <td>
-          {{view Ember.Select
-            viewName="select"
-            contentBinding=team.roster.positions
-            optionLabelPath="content.name"
-            optionValuePath="content.id"
-            selectionBinding="position"
-          }}
-        </td>
-        <td>{{position.ma}}</td>
-        <td>{{position.st}}</td>
-        <td>{{position.ag}}</td>
-        <td>{{position.av}}</td>
-        <td></td>
-        <td>{{position.cost}}</td>
-        <td>done</td>
-      </tr>
-    {{/each}}
+    {{view Ember.CollectionView contentBinding="players"
+        itemViewClass="CalculateYourTV.PlayerView"}}
   </table>
 {{/each}}

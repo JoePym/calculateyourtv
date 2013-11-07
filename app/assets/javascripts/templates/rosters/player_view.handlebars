@@ -1,0 +1,35 @@
+{{#if view.isShowVisible}}
+  <tr>
+    <td>{{view.content.number}}</td>
+    <td>{{view.content.name}}</td>
+    <td>{{view.content.position.name}}</td>
+    <td>{{view.content.position.ma}}</td>
+    <td>{{view.content.position.st}}</td>
+    <td>{{view.content.position.ag}}</td>
+    <td>{{view.content.position.av}}</td>
+    <td></td>
+    <td>{{view.content.position.cost}}</td>
+    <td><a {{action "toggleVisibility" target="view"}}>Edit</a></td>
+  </tr>
+{{else}}
+  <tr>
+    <td>{{view.content.number}}</td>
+    <td>{{input type="text" value=view.content.name}}</td>
+    <td>
+      {{view Ember.Select
+        viewName="select"
+        contentBinding=view.content.team.roster.positions
+        optionLabelPath="content.name"
+        optionValuePath="content.id"
+        selectionBinding="view.content.position"
+      }}
+    </td>
+    <td>{{view.content.position.ma}}</td>
+    <td>{{view.content.position.st}}</td>
+    <td>{{view.content.position.ag}}</td>
+    <td>{{view.content.position.av}}</td>
+    <td></td>
+    <td>{{view.content.position.cost}}</td>
+    <td><a {{action "toggleVisibility" target="view"}}>Done</a></td>
+  </tr>
+{{/if}}
