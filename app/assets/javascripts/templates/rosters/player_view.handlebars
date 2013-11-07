@@ -1,5 +1,5 @@
-{{#if view.isShowVisible}}
-  <tr>
+<tr>
+  {{#if view.isShowVisible}}
     <td>{{view.content.number}}</td>
     <td>{{view.content.name}}</td>
     <td>{{view.content.position.name}}</td>
@@ -9,10 +9,8 @@
     <td>{{view.content.position.av}}</td>
     <td></td>
     <td>{{view.content.position.cost}}</td>
-    <td><a {{action "toggleVisibility" target="view"}}>Edit</a></td>
-  </tr>
-{{else}}
-  <tr>
+    <td><a {{action "toggleVisibility" target="view" bubbles=false}}>Edit</a></td>
+  {{else}}
     <td>{{view.content.number}}</td>
     <td>{{input type="text" value=view.content.name}}</td>
     <td>
@@ -30,6 +28,6 @@
     <td>{{view.content.position.av}}</td>
     <td></td>
     <td>{{view.content.position.cost}}</td>
-    <td><a {{action "toggleVisibility" target="view"}}>Done</a></td>
-  </tr>
-{{/if}}
+    <td><a {{action "toggleVisibility" target="view" bubbles=false}}>Done</a></td>
+  {{/if}}
+</tr>
