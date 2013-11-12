@@ -1,22 +1,11 @@
-{{#each teams}}
-  <h1>{{name}} - {{tv}}</h1>
-  <table class="table table-bordered">
-    {{partial "rosters/team_attributes"}}
-  </table>
-  <table class="table table-bordered">
-    <tr>
-      <th>No</th>
-      <th>Name</th>
-      <th>Position</th>
-      <th>Ma</th>
-      <th>St</th>
-      <th>Ag</th>
-      <th>Av</th>
-      <th>Skills</th>
-      <th>Cost</th>
-      <th></th>
-    </tr>
-  </table>
-      {{view Ember.CollectionView contentBinding="players"
-        itemViewClass="CalculateYourTV.PlayerView"}}
-{{/each}}
+<h1>{{team.name}} - {{team.tv}}</h1>
+<table class="table table-bordered">
+  {{partial "rosters/team_attributes"}}
+</table>
+
+<a {{action "addPlayer"}}>Add Player</a>
+{{view Ember.CollectionView
+  itemViewClass="CalculateYourTV.PlayerView"
+  contentBinding=team.players
+  tagName="table"
+  classNames="table table-bordered"}}

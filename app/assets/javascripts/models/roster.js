@@ -3,6 +3,7 @@ CalculateYourTV.Roster = DS.Model.extend({
   logo_path: DS.attr(),
   reroll_cost: DS.attr(),
   allow_apo: DS.attr(),
-  teams: DS.hasMany("team"),
-  positions: DS.hasMany("position")
+  team: DS.belongsTo("team"),
+  positions: DS.hasMany("position"),
+  journeyman: DS.belongsTo("position")
 });

@@ -1,44 +1,42 @@
-<tr>
-  {{#if view.isShowVisible}}
-    <td>{{view.content.number}}</td>
-    <td>{{view.content.name}}</td>
-    <td>{{view.content.position.name}}</td>
-    <td>{{view.content.position.ma}}</td>
-    <td>{{view.content.position.st}}</td>
-    <td>{{view.content.position.ag}}</td>
-    <td>{{view.content.position.av}}</td>
-    <td>
-      {{#each skill in view.content.position.skills}}
-        <span class="label label-default">{{skill.name}}</span>
-      {{/each}}
-    </td>
-    <td>{{view.content.position.cost}}</td>
-    <td>
-      <a {{action "toggleVisibility" target="view"}}>Edit</a>
-      <a {{action "removePlayer" target="view"}}>Delete</a>
-    </td>
-  {{else}}
-    <td>{{view.content.number}}</td>
-    <td>{{input type="text" value=view.content.name}}</td>
-    <td>
-      {{view Ember.Select
-        viewName="select"
-        contentBinding=view.content.team.roster.positions
-        optionLabelPath="content.name"
-        optionValuePath="content.id"
-        selectionBinding="view.content.position"
-      }}
-    </td>
-    <td>{{view.content.position.ma}}</td>
-    <td>{{view.content.position.st}}</td>
-    <td>{{view.content.position.ag}}</td>
-    <td>{{view.content.position.av}}</td>
-    <td>
-      {{#each skill in view.content.position.skills}}
-        <span class="label label-default">{{skill.name}}</span>
-      {{/each}}
-    </td>
-    <td>{{view.content.position.cost}}</td>
-    <td><a {{action "toggleVisibility" target="view"}}>Done</a></td>
-  {{/if}}
-</tr>
+{{#if view.isShowVisible}}
+  <td>{{view.content.number}}</td>
+  <td>{{view.content.name}}</td>
+  <td>{{view.content.position.name}}</td>
+  <td>{{view.content.position.ma}}</td>
+  <td>{{view.content.position.st}}</td>
+  <td>{{view.content.position.ag}}</td>
+  <td>{{view.content.position.av}}</td>
+  <td>
+    {{#each skill in view.content.position.skills}}
+      <span class="label label-default">{{skill.name}}</span>
+    {{/each}}
+  </td>
+  <td>{{view.content.position.cost}}</td>
+  <td>
+    <a {{action "toggleVisibility" target="view"}}>Edit</a>
+    <a {{action "removePlayer" target="view"}}>Delete</a>
+  </td>
+{{else}}
+  <td>{{view.content.number}}</td>
+  <td>{{input type="text" value=view.content.name}}</td>
+  <td>
+    {{view Ember.Select
+      viewName="select"
+      contentBinding=view.content.team.roster.positions
+      optionLabelPath="content.name"
+      optionValuePath="content.id"
+      selectionBinding="view.content.position"
+    }}
+  </td>
+  <td>{{view.content.position.ma}}</td>
+  <td>{{view.content.position.st}}</td>
+  <td>{{view.content.position.ag}}</td>
+  <td>{{view.content.position.av}}</td>
+  <td>
+    {{#each skill in view.content.position.skills}}
+      <span class="label label-default">{{skill.name}}</span>
+    {{/each}}
+  </td>
+  <td>{{view.content.position.cost}}</td>
+  <td><a {{action "toggleVisibility" target="view"}}>Done</a></td>
+{{/if}}

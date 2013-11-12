@@ -1,10 +1,10 @@
 class Api::V1::RostersController < ApplicationController
 
   def index
-    render json: Roster.includes(teams: :players).includes(:positions)
+    render json: Roster.includes(team: :players).includes(:positions)
   end
 
   def show
-    render json: Roster.includes(teams: :players).find(params[:id])
+    render json: Roster.includes(team: :players).find(params[:id])
   end
 end

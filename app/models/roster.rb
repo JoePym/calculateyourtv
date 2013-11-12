@@ -1,4 +1,4 @@
 class Roster < ActiveRecord::Base
   has_many :positions
-  has_many :teams
+  has_one :team
 end
