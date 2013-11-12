@@ -11,9 +11,12 @@ CalculateYourTV.RostersShowController = Ember.ObjectController.extend({
       player.deleteRecord();
     },
     addPlayer: function(){
-      var roster = this.get("model")
-      var team = roster.get('team')
-      var player = this.store.createRecord("player", {name: "Rookie",number: 17});
+      var roster = this.get("model");
+      var team = roster.get('team');
+      if(team.get('players').get('length') > 15){
+        return false;
+      }
+      var player = this.store.createRecord("player", {name: "Rookie",number: team.nextPlayerNumber()} );
       player.set("team", team);
       team.get('players').pushObject(player);
       player.set("position", roster.get("journeyman"));

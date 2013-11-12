@@ -18,5 +18,13 @@ CalculateYourTV.Team = DS.Model.extend({
       sum += player.get("cost")
     });
     return sum;
-  }.property('apo', 'rerolls', 'roster.reroll_cost', 'assistant_coaches', 'cheerleaders', "players.@each.cost")
+  }.property('apo', 'rerolls', 'roster.reroll_cost', 'assistant_coaches', 'cheerleaders', "players.@each.cost"),
+  nextPlayerNumber: function(){
+    var numbers = this.get('players').map(function(p){return p.get("number")});
+    for(var i=0;i<16;i++){
+      if(numbers.indexOf(i + 1) == -1){
+        return i + 1;
+      }
+    }
+  }
 });

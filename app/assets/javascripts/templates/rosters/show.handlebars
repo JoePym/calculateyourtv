@@ -4,7 +4,7 @@
 </table>
 
 <a {{action "addPlayer"}}>Add Player</a>
-{{view Ember.CollectionView
+{{collection
   itemViewClass="CalculateYourTV.PlayerView"
   contentBinding=team.players
   tagName="table"
