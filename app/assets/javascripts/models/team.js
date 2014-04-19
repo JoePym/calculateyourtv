@@ -26,5 +26,27 @@ CalculateYourTV.Team = DS.Model.extend({
         return i + 1;
       }
     }
-  }
+  },
+  availablePositions: function(){
+    var playerPositions = this.get('players').map(function(p){return p.get("position")});
+    var positionCounts = {}
+    playerPositions.forEach(function(position){
+      if(position){
+        var pid = position.get("id")
+        if(positionCounts[pid]){
+          positionCounts[pid] += 1;
+        } else{
+          positionCounts[pid] = 1;
+        }
+      }
+    });
+    var returnedPositions = []
+    this.get('roster').get('positions').forEach(function(position){
+      if(positionCounts[position.get('id')] < position.get('maximum')){
+        returnedPositions.push(position);
+      }
+    });
+    console.log(returnedPositions)
+    return returnedPositions;
+  }.property("roster.positions", "players.@each.position", "roster.positions.@each.maximum")
 });
