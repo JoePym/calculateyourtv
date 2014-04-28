@@ -1,0 +1,19 @@
+<div>
+{{#each currentPlayer.normalSkillCategories}}
+  <h5>{{name}} Skills </h5>
+    {{collection
+      itemViewClass="CalculateYourTV.SkillView"
+      contentBinding=skills
+      currentPlayerBinding=currentPlayer
+      tagName="div"
+      classNames="skillBox"}}
+{{/each}}
+{{#each currentPlayer.doubleSkillCategories}}
+  <h5>{{name}} Skills </h5>
+    {{collection
+      itemViewClass="CalculateYourTV.SkillView"
+      contentBinding=skills
+      tagName="div"
+      classNames="skillBox"}}
+{{/each}}
+</div>

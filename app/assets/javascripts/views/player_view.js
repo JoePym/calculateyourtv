@@ -3,6 +3,9 @@ CalculateYourTV.PlayerView = Ember.View.extend({
   templateName: 'rosters/player_view',
   isShowVisible: true,
   actions: {
+    chooseSkillDialogue: function(){
+      this.get("controller").send("chooseSkillDialogue", this.content)
+    },
     toggleVisibility: function(){
       this.toggleProperty('isShowVisible');
     },

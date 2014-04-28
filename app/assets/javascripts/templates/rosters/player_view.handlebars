@@ -10,9 +10,13 @@
     {{#each skill in view.content.position.skills}}
       <span class="label label-default">{{skill.name}}</span>
     {{/each}}
+    {{#each skill in view.content.skills}}
+      <span class="label label-default">{{skill.name}}</span>
+    {{/each}}
   </td>
-  <td>{{view.content.position.cost}}</td>
+  <td>{{view.content.cost}}</td>
   <td>
+    <a {{action "chooseSkillDialogue" target="view"}} data-toggle="modal" data-target="#modal">Manage Skills</a>
     <a {{action "toggleVisibility" target="view"}}>Edit</a>
     <a {{action "removePlayer" target="view"}}>Delete</a>
   </td>

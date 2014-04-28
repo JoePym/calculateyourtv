@@ -3,6 +3,8 @@ CalculateYourTV.RostersIndexController = Ember.ArrayController.extend({
 });
 
 CalculateYourTV.RostersShowController = Ember.ObjectController.extend({
+  currentPlayer: null,
+  skillSelectVisible: false,
   actions:{
     removePlayer: function(player){
       var roster = this.get("model")
@@ -20,6 +22,18 @@ CalculateYourTV.RostersShowController = Ember.ObjectController.extend({
       player.set("team", team);
       team.get('players').pushObject(player);
       player.set("position", roster.get("journeyman"));
+    },
+    chooseSkillDialogue: function(player){
+      this.set('currentPlayer', player);
+      this.set('skillSelectVisible', true);
+    },
+    addSkillToCurrentPlayer: function(skill){
+      this.get('currentPlayer').addSkill(skill);
+      this.get('currentPlayer').notifyPropertyChange('skills');
+    },
+    removeSkillFromCurrentPlayer: function(skill){
+      this.get('currentPlayer').removeSkill(skill);
+      this.get('currentPlayer').notifyPropertyChange('skills');
     }
   }
 });
