@@ -27,6 +27,30 @@ CalculateYourTV.Player = DS.Model.extend({
   doubleSkillCategories: function(){
   	return this.get('position.double_skills')
   }.property('position.double_skills'),
+  normalSkillList: function(){
+    var list = Ember.A([]);
+    var player = this
+    Ember.A(['normalSkillCategories']).forEach(function(cat, index){
+      player.get(cat).toArray().forEach(function(sc, i){
+        sc.get('skills').toArray().forEach(function(s, i){
+          list.push(s);
+        });
+      });
+    }); 
+    return list;
+  }.property('normalSkillCategories'),
+  doubleSkillList: function(){
+    var list = Ember.A([]);
+    var player = this
+    Ember.A(['doubleSkillCategories']).forEach(function(cat, index){
+      player.get(cat).toArray().forEach(function(sc, i){
+        sc.get('skills').toArray().forEach(function(s, i){
+          list.push(s);
+        });
+      });
+    }); 
+    return list;
+  }.property('doubleSkillCategories'),
   addSkill: function(skill){
     this.get('skills').pushObject(skill);
   },
@@ -52,5 +76,28 @@ CalculateYourTV.Player = DS.Model.extend({
       });
     })
     return present;    
+  },
+  hasNormalSkill: function(skill){
+    if(this.hasDefaultSkill(skill)){
+      return false;
+    }
+
+    var present = false
+    var player = this
+    this.get('normalSkillList').toArray().forEach(function(s, index){
+      present = present || s.get('name') == skill.get('name')
+    });
+    return present;
+  },
+  hasDoubleSkill: function(skill){
+    if(this.hasDefaultSkill(skill)){
+      return false;
+    }
+    var present = false
+    var player = this
+    this.get('doubleSkillList').toArray().forEach(function(s, index){
+      present = present || s.get('name') == skill.get('name')
+    });
+    return present;
   }
 });

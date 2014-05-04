@@ -6,12 +6,12 @@
   <td>{{view.content.position.st}}</td>
   <td>{{view.content.position.ag}}</td>
   <td>{{view.content.position.av}}</td>
-  <td>
+  <td class="skillBox">
     {{#each skill in view.content.position.skills}}
-      <span class="label label-default">{{skill.name}}</span>
+      {{view CalculateYourTV.SkillLabelView contentBinding=skill playerBinding=view.content}}
     {{/each}}
     {{#each skill in view.content.skills}}
-      <span class="label label-default">{{skill.name}}</span>
+      {{view CalculateYourTV.SkillLabelView contentBinding=skill playerBinding=view.content}}
     {{/each}}
   </td>
   <td>{{view.content.cost}}</td>
