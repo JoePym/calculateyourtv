@@ -1,6 +1,4 @@
 class RosterSerializer < ActiveModel::Serializer
-  cached
-  delegate :cache_key, to: :object
   #we need the image path to load the logo file for the roster
   include ActionView::Helpers::AssetTagHelper
 

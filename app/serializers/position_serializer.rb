@@ -1,6 +1,4 @@
 class PositionSerializer < ActiveModel::Serializer
-  cached
-  delegate :cache_key, to: :object
   attributes :id, :name, :st, :ag, :ma, :av, :cost, :journeyman_position, :normal_skills, :double_skills,
              :roster, :maximum, :enhancements
 
