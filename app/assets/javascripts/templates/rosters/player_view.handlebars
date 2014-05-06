@@ -2,10 +2,10 @@
   <td>{{view.content.number}}</td>
   <td>{{view.content.name}}</td>
   <td>{{view.content.position.name}}</td>
-  <td>{{view.content.position.ma}}</td>
-  <td>{{view.content.position.st}}</td>
-  <td>{{view.content.position.ag}}</td>
-  <td>{{view.content.position.av}}</td>
+  <td>{{view.content.ma}}</td>
+  <td>{{view.content.st}}</td>
+  <td>{{view.content.ag}}</td>
+  <td>{{view.content.av}}</td>
   <td class="skillBox">
     {{#each skill in view.content.position.skills}}
       {{view CalculateYourTV.SkillLabelView contentBinding=skill playerBinding=view.content}}
@@ -36,11 +36,14 @@
   <td>{{view.content.position.st}}</td>
   <td>{{view.content.position.ag}}</td>
   <td>{{view.content.position.av}}</td>
-  <td>
+  <td class="skillBox">
     {{#each skill in view.content.position.skills}}
-      <span class="label label-default">{{skill.name}}</span>
+      {{view CalculateYourTV.SkillLabelView contentBinding=skill playerBinding=view.content}}
+    {{/each}}
+    {{#each skill in view.content.skills}}
+      {{view CalculateYourTV.SkillLabelView contentBinding=skill playerBinding=view.content}}
     {{/each}}
   </td>
-  <td>{{view.content.position.cost}}</td>
+  <td>{{view.contentBinding.cost}}</td>
   <td><a {{action "toggleVisibility" target="view"}}>Done</a></td>
 {{/if}}

@@ -1,5 +1,5 @@
 #first load the skills and categories
-skill_categories = ["General", "Strength", "Agility", "Mutation", "Passing", "Extraordinary"];
+skill_categories = ["General", "Strength", "Agility", "Mutation", "Passing", "Extraordinary", "Enhancements"];
 skills = {
   general:  ["Block", "Dauntless", "Dirty Player", "Fend", "Frenzy", "Kick", "Kick-Off Return",
    "Pass Block", "Pro", "Shadowing", "Strip Ball", "Sure Hands", "Tackle", "Wrestle"],
@@ -13,7 +13,8 @@ skills = {
   extraordinary: ["Always Hungry", "Animosity", "Ball & Chain", "Blood Lust", "Bombadier", "Bone-head",
    "Chainsaw", "Decay", "Fan Favourite", "Hypnotic Gaze", "Loner", "No Hands", "Nurgle's Rot", "Really Stupid",
    "Regeneration", "Right Stuff", "Secret Weapon", "Stab", "Stakes", "Stunty", "Take Root", "Throw Team-Mate",
-   "Titchy", "Wild Animal"]
+   "Titchy", "Wild Animal"],
+  enhancements: ["St", "St", "Ag", "Ag", "Ma", "Ma", "Av", "Av"]
 }
 
 skill_categories.map!{|sc| SkillCategory.create(:name => sc)}

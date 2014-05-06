@@ -19,7 +19,7 @@ thrower = amazons.positions.create(:name => "Thrower",
 linewoman = amazons.positions.create(:name => "Linewoman",
   :ma => 6, :st => 3, :ag => 3, :av => 7,
   :default_skills => ["Dodge"],
-  :normal_skills => ["general"], :double_skills => ["strength", "agility"],
+  :normal_skills => ["general"], :double_skills => ["strength", "agility", 'passing'],
   :maximum => 16,:cost => 50, :journeyman_position => true)
 
 puts "Creating amazon team"

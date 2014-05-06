@@ -11,6 +11,10 @@ class Position < ActiveRecord::Base
     skill_categories.where(:skill_accesses => {:normal => false})
   end
 
+  def enhancements
+    SkillCategory.where(name: "Enhancements")
+  end
+
   def normal_skills=(arr)
     names = arr.map(&:titlecase)
     categories = SkillCategory.where(:name => names)

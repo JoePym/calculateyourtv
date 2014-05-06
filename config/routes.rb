@@ -7,6 +7,7 @@ CalculateYourTV::Application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :rosters, :only => [:show, :index]
+      resources :skill_categories, :only => [:show, :index]
     end
 
   end

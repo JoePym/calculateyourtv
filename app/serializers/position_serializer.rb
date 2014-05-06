@@ -1,6 +1,6 @@
 class PositionSerializer < ActiveModel::Serializer
   attributes :id, :name, :st, :ag, :ma, :av, :cost, :journeyman_position, :normal_skills, :double_skills,
-             :roster, :maximum
+             :roster, :maximum, :enhancements
 
   has_many :skills, key: :skills
   has_many :skill_categories, key: :skill_categories
@@ -16,5 +16,9 @@ class PositionSerializer < ActiveModel::Serializer
 
   def double_skills
     object.double_skills.map(&:id)
+  end
+
+  def enhancements
+    object.enhancements.map(&:id)
   end
 end

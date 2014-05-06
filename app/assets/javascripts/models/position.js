@@ -10,5 +10,6 @@ CalculateYourTV.Position = DS.Model.extend({
   maximum: DS.attr(),
   skills: DS.hasMany("skill"),
   normal_skills: DS.hasMany("skillCategory"),
-  double_skills: DS.hasMany("skillCategory")
+  double_skills: DS.hasMany("skillCategory"),
+  enhancements: DS.hasMany("skillCategory", {async: true})
 });
