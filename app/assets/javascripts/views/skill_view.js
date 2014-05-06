@@ -23,7 +23,9 @@ CalculateYourTV.SkillView = Ember.View.extend({
       return false;
     }
   	if(!this.get('hasSkill')){
-    	this.get('controller').send('addSkillToCurrentPlayer', this.get('content'));
+      if(this.get('controller.currentPlayer.skills').toArray().length < 6){
+    	  this.get('controller').send('addSkillToCurrentPlayer', this.get('content'));
+      }
     } else {
     	this.get('controller').send('removeSkillFromCurrentPlayer', this.get('content'));
     }
