@@ -1,8 +1,12 @@
-<h1>{{team.name}} - {{team.tv}}</h1>
-<table class="table table-bordered">
-  {{partial "rosters/team_attributes"}}
-</table>
-
+<div class="col-md-1 teamPic">
+  <img {{bindAttr src="content.logo_path"}}>
+</div>
+<div class="col-md-11">
+  <h1>{{team.name}} - {{team.tv}}</h1>
+  <table class="table table-bordered">
+    {{partial "rosters/team_attributes"}}
+  </table>
+</div>
 <a {{action "addPlayer"}}>Add Player</a>
 {{collection
   itemViewClass="CalculateYourTV.PlayerView"
