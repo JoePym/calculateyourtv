@@ -18,6 +18,7 @@
 //= require twitter/bootstrap
 //= require_self
 //= require calculateyourtv
+//= require fileDownload
 
 // for more details see: http://emberjs.com/guides/application/
 CalculateYourTV = Ember.Application.create();

@@ -66,8 +66,12 @@ GEM
     mime-types (1.25)
     minitest (4.7.5)
     multi_json (1.8.1)
+    pdf-core (0.2.5)
     pg (0.16.0)
     polyglot (0.3.3)
+    prawn (1.0.0)
+      pdf-core (~> 0.2.2)
+      ttfunk (~> 1.1.1)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -111,6 +115,7 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
+    ttfunk (1.1.1)
     tzinfo (0.3.38)
     uglifier (2.2.1)
       execjs (>= 0.3.0)
@@ -128,6 +133,7 @@ DEPENDENCIES
   haml
   jquery-rails
   pg
+  prawn
   rails (= 4.0.0)
   sass-rails (~> 4.0.0)
   sdoc

@@ -1,7 +1,7 @@
 CalculateYourTV.Team = DS.Model.extend({
   name: DS.attr(),
   roster: DS.belongsTo("roster"),
-  players: DS.hasMany("player"),
+  players: DS.hasMany("player", {embedded: 'always'}),
   rerolls: DS.attr(),
   assistant_coaches: DS.attr(),
   cheerleaders: DS.attr(),

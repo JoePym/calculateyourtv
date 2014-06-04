@@ -24,13 +24,11 @@
   <td>{{view.content.number}}</td>
   <td>{{input type="text" value=view.content.name}}</td>
   <td>
-    {{view Ember.Select
-      viewName="select"
-      contentBinding=view.content.team.roster.positions
-      optionLabelPath="content.name"
-      optionValuePath="content.id"
-      selectionBinding="view.content.position"
-    }}
+    <select>
+      {{#each position in view.content.team.roster.positions}}
+        {{view CalculateYourTV.PlayerChangeDropdownView contentBinding=position playerBinding=view.content}}
+      {{/each}}
+    </select>
   </td>
   <td>{{view.content.position.ma}}</td>
   <td>{{view.content.position.st}}</td>

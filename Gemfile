@@ -19,7 +19,7 @@ gem 'ember-data-source', "1.0.0.beta.2"
 gem 'bootstrap-sass-rails'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-
+gem 'prawn'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 gem 'haml'

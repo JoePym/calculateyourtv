@@ -1,13 +1,18 @@
 <div class="col-md-1 teamPic">
   <img {{bindAttr src="content.logo_path"}}>
 </div>
-<div class="col-md-11">
+<div class="col-md-6">
   <h1>{{team.name}} - {{team.tv}}</h1>
+</div>
+<div class="col-md-5 text-right">
+  <button type="button" class="btn btn-primary" style="margin-top:30px" {{action 'download'}}> Download roster</button>
+  <button type="button" class="btn btn-success" style="margin-top:30px" {{action 'addPlayer'}}> Add Player</button>
+</div>
+<div class="col-md-11">
   <table class="table table-bordered">
     {{partial "rosters/team_attributes"}}
   </table>
 </div>
-<a {{action "addPlayer"}}>Add Player</a>
 {{collection
   itemViewClass="CalculateYourTV.PlayerView"
   contentBinding=team.players

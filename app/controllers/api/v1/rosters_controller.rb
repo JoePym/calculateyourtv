@@ -7,4 +7,7 @@ class Api::V1::RostersController < ApplicationController
   def show
     render json: Roster.includes(team: :players).find(params[:id])
   end
+
+  def download
+  end
 end

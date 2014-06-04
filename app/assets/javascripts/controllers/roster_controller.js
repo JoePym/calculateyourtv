@@ -5,7 +5,16 @@ CalculateYourTV.RostersIndexController = Ember.ArrayController.extend({
 CalculateYourTV.RostersShowController = Ember.ObjectController.extend({
   currentPlayer: null,
   skillSelectVisible: false,
+  allowsDownload: true,
   actions:{
+    download: function(){
+      var roster = this.get("model");
+      var team = roster.get('team');
+      $.fileDownload('/api/v1/teams/download_pdf', {
+        httpMethod: "POST",
+        data: {team: team.toJSON({associations: true})}
+      });
+    },
     removePlayer: function(player){
       var roster = this.get("model")
       var team = roster.get('team')
