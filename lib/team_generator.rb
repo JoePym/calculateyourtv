@@ -14,7 +14,7 @@ class TeamGenerator
       @pdf.text "Coached By: #{@team[:coach]}"
     end    
     team_details = [
-      ["Team Gold", "#{@team[:gold]}k", "Apothecary", @team[:apo] ? "Yes" : "No"],
+      ["Team Gold", "#{@team[:gold]}k", "Apothecary", @team[:apo] == "true" ? "Yes" : "No"],
       ["Rerolls (#{@roster.reroll_cost.to_i}k):", @team[:rerolls], "Cheerleaders", @team[:cheerleaders]],
       ["Assistant Coaches", @team[:assistant_coaches], "Fan Factor", @team[:fanfactor]]
     ]
@@ -23,32 +23,30 @@ class TeamGenerator
     end
     num_col_width = 27
     widths = [num_col_width, 90, 130, num_col_width, num_col_width, num_col_width, num_col_width, 325, 40]
-    # headers = [["", "Name", "Position", "Ma", 
-    #          "St", "Ag", "Av", "Skills", "Cost"]]
-    # player_array = @team[:players].map do |player|
-    #   position = Position.find(player.delete(:position))
-    #   @plus_st = @plus_ag = @plus_ma = @plus_av = 0
-    #   cost =  if (player[:skills] && player.skills.select{|k,v| v['type'] != 'default'}.present?) 
-    #             green(player.cost) 
-    #           else
-    #             player.cost
-    #           end
-    #   skills = format_skills(player.skills)
-    #   [ player.playerNum,
-    #     player.name.gsub("+", " "),
-    #     position.name.gsub("+", " "),
-    #     @plus_ma > 0 ? green(player.ma) : player.ma, 
-    #     @plus_st > 0 ? green(player.st) : player.st, 
-    #     @plus_ag > 0 ? green(player.ag) : player.ag, 
-    #     @plus_av > 0 ? green(player.av) : player.av, 
-    #     skills,
-    #     cost
-    #   ]
-   #  # end
-  	# @pdf.table(headers + player_array, :row_colors => %w[cccccc ffffff],
-   #                                     :column_widths => widths,
-   #                                     :header => true,
-   #                                     :cell_style => {:inline_format => true, :size => 11})
+    headers = [["", "Name", "Position", "Ma", 
+             "St", "Ag", "Av", "Skills", "Cost"]]
+    player_array = @team[:players].map do |index, player|
+      @plus_ma = @plus_av = @plus_ag = @plus_st = 0
+      position = Position.find(player.delete(:position))
+      skills = format_skills(player[:skills], position)
+      cost = player[:cost]
+      [ index + 1,
+        player[:name],
+        position.name,
+        position.ma + @plus_ma, 
+        position.st + @plus_st, 
+        position.ag + @plus_ag,
+        position.av + @plus_av,
+        skills,
+        player[:cost]
+      ]
+    end
+    data = headers + player_array
+
+  	@pdf.table(data, :row_colors => %w[cccccc ffffff],
+                                       :column_widths => widths,
+                                       :header => true,
+                                       :cell_style => {:inline_format => true, :size => 11})
     @pdf.table([["", "Team Value:", "#{@team[:tv]}k"]], :column_widths => [530, 150, 40], :cell_style => {:inline_format => true, :size => 11})
   end
 
@@ -64,11 +62,13 @@ class TeamGenerator
     "<color rgb='#{@stat_green}'>#{text}</color>"
   end
 
-  def format_skills(skills)
+  def format_skills(skills, position)
     return "" unless skills.present?
-    skills.map do |k,v| 
-      skill_type, name = v["type"], v["name"]
-      name = name.gsub("+", " ")
+    skills.map do |index, skill|
+      name = skill[:name]
+      skill_type = name.downcase
+      skill_type = "normal" if position.normal_skills.map(&:id).include?(skill[:skill_category].to_i)
+      skill_type = "double" if position.double_skills.map(&:id).include?(skill[:skill_category].to_i)
       case skill_type
       when "normal"
         "<color rgb='#3A87AD'>#{name}</color>"
