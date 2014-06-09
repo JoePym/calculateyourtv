@@ -1,5 +1,3 @@
-require 'capistrano-unicorn'
-
 # config valid only for Capistrano 3.1
 lock '3.2.1'
 
@@ -59,7 +57,9 @@ namespace :deploy do
 
 end
 
-after 'deploy:restart', 'unicorn:reload'    # app IS NOT preloaded
-after 'deploy:restart', 'unicorn:restart'   # app preloaded
-after 'deploy:restart', 'unicorn:duplicate' # before_fork hook implemented (zero downtime deployments)
-
+after 'deploy:publishing', 'deploy:restart'
+namespace :deploy do
+  task :restart do
+    invoke 'unicorn:restart'
+  end
+end

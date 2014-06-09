@@ -41,8 +41,8 @@ GEM
       i18n
       rake (>= 10.0.0)
       sshkit (~> 1.3)
-    capistrano-unicorn (0.1.10)
-      capistrano
+    capistrano3-unicorn (0.1.1)
+      capistrano (>= 3.1.0)
     colorize (0.7.3)
     ember-data-source (1.0.0.beta.2)
       ember-source
@@ -148,7 +148,7 @@ DEPENDENCIES
   active_model_serializers
   bootstrap-sass-rails
   capistrano
-  capistrano-unicorn
+  capistrano3-unicorn
   ember-data-source (= 1.0.0.beta.2)
   ember-rails
   ember-source (= 1.0.0)

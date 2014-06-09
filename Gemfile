@@ -30,7 +30,7 @@ gem "active_model_serializers"
 
 group :development do 
 	gem 'capistrano'
-  gem 'capistrano-unicorn', :require => false
+  gem 'capistrano3-unicorn'
 end
 
 group :doc do
