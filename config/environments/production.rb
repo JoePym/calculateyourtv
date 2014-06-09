@@ -46,7 +46,7 @@ CalculateYourTV::Application.configure do
 
   # Set to :debug to see everything in the log.
   config.log_level = :info
-  config.action_controller.page_cache_directory = "#{Rails.root.to_s}/public/deploy"
+  config.action_controller.page_cache_directory = "#{Rails.root.to_s}/public"
   # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]
 
