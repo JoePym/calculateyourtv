@@ -2,8 +2,12 @@
 worker_processes Integer(ENV["WEB_CONCURRENCY"] || 3)
 timeout 15
 preload_app true
-config_dir = File.symlink?(__FILE__) ? File.readlink(__FILE__) : __FILE__
-cwd = File.expand_path('..', config_dir)
+cwd = if ENV['RAILS_ENV'] == 'production'
+  File.join('/var', 'www', 'calculateyour.tv', 'current')
+else
+  config_dir = File.symlink?(__FILE__) ? File.readlink(__FILE__) : __FILE__
+  File.expand_path('..', config_dir)
+end
 working_directory cwd
 pid cwd.join("tmp", "pids", "unicorn.pid")
 listen cwd.join("tmp", "sockets", "unicorn.sock")
