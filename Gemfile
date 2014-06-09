@@ -30,6 +30,7 @@ gem "active_model_serializers"
 
 group :development do 
 	gem 'capistrano'
+  gem 'capistrano-bundler', '~> 1.1.2'
   gem 'capistrano3-unicorn'
 end
 

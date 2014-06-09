@@ -9,6 +9,7 @@ role :web, %w{deploy@calculateyour.tv}
 role :db,  %w{deploy@calculateyour.tv}
 
 
+set :unicorn_config_path, 'config/unicorn.rb'
 # Extended Server Syntax
 # ======================
 # This can be used to drop a more detailed server definition into the
