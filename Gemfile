@@ -24,6 +24,7 @@ gem 'prawn'
 gem 'jquery-rails'
 gem 'haml'
 gem "active_model_serializers"
+gem 'actionpack-page_caching'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 # gem 'turbolinks'
 
