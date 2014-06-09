@@ -7,7 +7,7 @@ gem 'pg'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
-
+gem 'unicorn'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
@@ -27,6 +27,11 @@ gem "active_model_serializers"
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 # gem 'turbolinks'
 
+
+group :development do 
+	gem 'capistrano'
+  gem 'capistrano-unicorn', :require => false
+end
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
