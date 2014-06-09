@@ -15,6 +15,6 @@ class Api::V1::TeamsController < ApplicationController
 
   def team_params
     params.require(:team).permit(:name, :rerolls, :assistant_coaches, :cheerleaders, :apo, :fanfactor, :gold,
-     :roster, players: [:name, :cost, :number, :position, :team, skills: [:name, :skill_category]])
+     :roster, :tv, players: [:name, :cost, :number, :position, :team, skills: [:name, :skill_category]])
   end
 end

@@ -30,13 +30,13 @@ class TeamGenerator
       position = Position.find(player.delete(:position))
       skills = format_skills(player[:skills], position)
       cost = player[:cost]
-      [ index + 1,
+      [ index.to_i + 1,
         player[:name],
         position.name,
-        position.ma + @plus_ma, 
-        position.st + @plus_st, 
-        position.ag + @plus_ag,
-        position.av + @plus_av,
+        @plus_ma > 0 ? green(position.ma + @plus_ma) : position.ma.to_s, 
+        @plus_st > 0 ? green(position.st + @plus_st) : position.st.to_s, 
+        @plus_ag > 0 ? green(position.ag + @plus_ag) : position.ag.to_s, 
+        @plus_av > 0 ? green(position.av + @plus_av) : position.av.to_s, 
         skills,
         player[:cost]
       ]
@@ -47,7 +47,7 @@ class TeamGenerator
                                        :column_widths => widths,
                                        :header => true,
                                        :cell_style => {:inline_format => true, :size => 11})
-    @pdf.table([["", "Team Value:", "#{@team[:tv]}k"]], :column_widths => [530, 150, 40], :cell_style => {:inline_format => true, :size => 11})
+    @pdf.table([["", "Team Value:", "#{tv}k"]], :column_widths => [530, 150, 40], :cell_style => {:inline_format => true, :size => 11})
   end
 
   def render
@@ -57,6 +57,14 @@ class TeamGenerator
 
 
   private
+
+  def tv
+    sum = @team[:rerolls].to_i*@roster.reroll_cost
+    sum += @team[:assistant_coaches].to_i*10
+    sum += @team[:cheerleaders].to_i*10
+    sum += @team[:players].map{|index, player| player[:cost].to_i}.sum
+    sum
+  end
 
   def green(text)
     "<color rgb='#{@stat_green}'>#{text}</color>"
