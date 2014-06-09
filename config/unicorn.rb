@@ -9,8 +9,8 @@ else
   File.expand_path('..', config_dir)
 end
 working_directory cwd
-pid cwd.join("tmp", "pids", "unicorn.pid")
-listen cwd.join("tmp", "sockets", "unicorn.sock")
+pid File.join(cwd, "tmp", "pids", "unicorn.pid")
+listen File.join(cwd, "tmp", "sockets", "unicorn.sock")
 before_fork do |server, worker|
   Signal.trap 'TERM' do
     puts 'Unicorn master intercepting TERM and sending myself QUIT instead'
