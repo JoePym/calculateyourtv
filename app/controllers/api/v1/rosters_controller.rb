@@ -1,5 +1,7 @@
 class Api::V1::RostersController < ApplicationController
-  caches_page :show, :index
+  if Rails.env == 'production'
+    caches_page :show, :index
+  end
 
   def index
     render json: Roster.includes(team: :players).includes(:positions)
