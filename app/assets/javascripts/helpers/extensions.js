@@ -16,3 +16,13 @@ DS.JSONSerializer.reopen({ // or DS.RESTSerializer
   }
 });
 
+Ember.SelectOption.reopen({
+  attributeBindings: ['value', 'selected', 'disabled'],
+
+  disabled: function() {
+    var content = this.get('content');
+    return content.disabled || false;
+  }.property('content'),
+
+});
+
