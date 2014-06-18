@@ -14,7 +14,7 @@ blitzer = khemri.positions.create(:name => "Blitz-Ra",
 thrower = khemri.positions.create(:name => "Thro-Ra",
   :ma => 6, :st => 3, :ag => 2, :av => 7,
   :normal_skills => ["general", "passing"], :double_skills => ["strength", "agility"],
-  :default_skills => ["Pass, Sure Hands", "Regeneration"], :maximum => 2,:cost => 70)
+  :default_skills => ["Pass", "Sure Hands", "Regeneration"], :maximum => 2,:cost => 70)
 skeleton = khemri.positions.create(:name => "Skeleton",
   :ma => 5, :st => 3, :ag => 2, :av => 7,
   :default_skills => ["Regeneration", "Thick Skull"],
