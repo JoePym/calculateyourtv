@@ -9,7 +9,7 @@ tomb_guardian = khemri.positions.create(:name => "Tomb Guardian",
 blitzer = khemri.positions.create(:name => "Blitz-Ra",
   :ma => 6, :st => 3, :ag => 2, :av => 8,
   :default_skills => ["Block", "Regeneration"],
-  :normal_skills => ["general", "strength"], :double_skills => ["strength", "agility"],
+  :normal_skills => ["general", "strength"], :double_skills => ["passing", "agility"],
   :cost => 90, :journeyman_position => false, :maximum => 4)
 thrower = khemri.positions.create(:name => "Thro-Ra",
   :ma => 6, :st => 3, :ag => 2, :av => 7,
