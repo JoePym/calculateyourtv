@@ -19,7 +19,7 @@ blitzer = orcs.positions.create(:name => "Blitzer",
 thrower = orcs.positions.create(:name => "Thrower",
   :ma => 5, :st => 3, :ag => 3, :av => 8,
   :normal_skills => ["general", "passing"], :double_skills => ["strength", "agility"],
-  :default_skills => ["Pass, Sure Hands"], :maximum => 2,:cost => 70)
+  :default_skills => ["Pass", "Sure Hands"], :maximum => 2,:cost => 70)
 goblin = orcs.positions.create(:name => "Goblin",
   :ma => 6, :st => 2, :ag => 3, :av => 7,
   :default_skills => ["Dodge", "Right Stuff", "Stunty"],
