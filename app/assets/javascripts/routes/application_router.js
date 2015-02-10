@@ -6,7 +6,7 @@ CalculateYourTV.IndexRoute = Ember.Route.extend({
 
 CalculateYourTV.RostersIndexRoute = Ember.Route.extend({
   setupController: function(controller) {
-    controller.set('model', this.store.findAll('roster'));
+    controller.set('model', this.store.findAll('roster', {sort: "name"}));
   }
 });
 
