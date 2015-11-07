@@ -10,7 +10,7 @@ class TeamGenerator
   def generate
     @pdf.image "#{Rails.root}/app/assets/images/#{@roster.logo_path}", :at => [0, @pdf.bounds.height], :height => 75
     @pdf.bounding_box([60, @pdf.bounds.height - 15], :width => 300, :height => 75) do
-      @pdf.text @team[:name].gsub("+", " ").truncate(50), :size => 27
+      @pdf.text @team[:name].gsub("+", " ").truncate(40), :size => 27
       @pdf.text "Coached By: #{@team[:coach]}"
     end
     team_details = [
