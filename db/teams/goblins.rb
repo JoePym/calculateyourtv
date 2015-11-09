@@ -4,7 +4,7 @@ goblins = Roster.create(:name => "Goblin", :reroll_cost => 60, :logo_path => "go
 puts "adding positionals to Goblins"
 troll = goblins.positions.create(:name => "Troll",
   :ma => 4, :st => 5, :ag => 1, :av => 9,
-  :default_skills => ["Loner", "Mighty Blow", "Really Stupid", "Throw Team Mate", "Regeneration"],
+  :default_skills => ["Loner", "Mighty Blow", "Really Stupid", "Throw Team-Mate", "Regeneration"],
   :normal_skills => ["strength"], :double_skills => ["general", "passing", "agility"],
   :maximum => 1,:cost => 110)
 fanatic = goblins.positions.create(:name => "Fanatic",
@@ -22,7 +22,7 @@ saw = goblins.positions.create(:name => "Looney",
 bombadier = goblins.positions.create(:name => "Bombardier",
   :ma => 6, :st => 2, :ag => 3, :av => 7,
   :normal_skills => ["agility"], :double_skills => ["passing", "general", "strength"],
-  :default_skills => ["Bombardier", "Dodge", "Stunty", "Right Stuff" ], :maximum => 1,:cost => 40, :journeyman_position => false)
+  :default_skills => ["Bombardier", "Dodge", "Stunty", "Secret Weapon" ], :maximum => 1,:cost => 40, :journeyman_position => false)
 goblin = goblins.positions.create(:name => "Goblin",
   :ma => 6, :st => 2, :ag => 3, :av => 7,
   :normal_skills => ["agility"], :double_skills => ["passing", "general", "strength"],

@@ -19,7 +19,7 @@ pestigor = nurgle.positions.create(:name => "Pestigor",
 rotter = nurgle.positions.create(:name => "Rotter",
   :ma => 5, :st => 3, :ag => 3, :av => 8,
   :default_skills => ["Decay", "Nurgle's Rot"],
-  :normal_skills => ["general"], :double_skills => ["passing", "agility", "strength", "mutation"],
+  :normal_skills => ["general", "mutation"], :double_skills => ["passing", "agility", "strength"],
   :cost => 40, :journeyman_position => true, :maximum => 16)
 
 puts "Creating sample team"

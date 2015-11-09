@@ -19,7 +19,7 @@ runner = dwarves.positions.create(:name => "Runner",
   :maximum => 2,:cost => 80, :journeyman_position => false)
 blitzer = dwarves.positions.create(:name => "Blitzer",
   :ma => 5, :st => 3, :ag => 3, :av => 9,
-  :default_skills => ["Block", "Thick Skull "],
+  :default_skills => ["Block", "Thick Skull"],
   :normal_skills => ["general", "strength"], :double_skills => ["agility", "passing"],
   :maximum => 2,:cost => 80, :journeyman_position => false)
 longbeard = dwarves.positions.create(:name => "Blocker",
@@ -50,7 +50,7 @@ names = [
 team.roster = dwarves
 team.save!
 5.times do |i|
-  team.players.create(:name => names[i], :position => longbeard, :number => i)
+  team.players.create(:name => names[i], :position => longbeard, :number => 1 + i)
 end
 2.times do |i|
   team.players.create(:name => names[5+i], :position => runner, :number => 6 + i)

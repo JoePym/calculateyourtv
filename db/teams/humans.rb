@@ -3,7 +3,7 @@ humans = Roster.create(:name => "Humans", :reroll_cost => 50, :logo_path => "hum
 puts "adding positionals to Humans"
 ogre = humans.positions.create(:name => "Ogre",
   :ma => 5, :st => 5, :ag => 2, :av => 9,
-  :default_skills => ["Loner", "Mighty Blow", "Bonehead", "Thick Skull", "Throw Team Mate"],
+  :default_skills => ["Loner", "Mighty Blow", "Bonehead", "Thick Skull", "Throw Team-Mate"],
   :normal_skills => ["strength"], :double_skills => ["general", "passing", "agility"],
   :maximum => 1,:cost => 140)
 blitzer = humans.positions.create(:name => "Blitzer",
@@ -53,8 +53,8 @@ team.players.create(:name => names[0], :position => ogre, :number => 1)
   team.players.create(:name => names[1+ i], :position => blitzer, :number => 2+ i)
 end
 1.times do |i|
-  team.players.create(:name => names[6+i], :position => thrower, :number => 7 + i)
+  team.players.create(:name => names[6+i], :position => thrower, :number => 6 + i)
 end
 5.times do |i|
-  team.players.create(:name => names[7+i], :position => lineman, :number => 8+ i)
+  team.players.create(:name => names[7+i], :position => lineman, :number => 7+ i)
 end

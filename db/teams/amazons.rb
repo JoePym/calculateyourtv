@@ -28,14 +28,14 @@ names = ["Imjal", "Jutaai","Anari","Tapuruai","Japjai","Caraoco","Jutacuara","Ta
 team.roster = amazons
 team.save!
 4.times do |i|
-  team.players.create(:name => names[i], :position => blitzer, :number => i)
+  team.players.create(:name => names[i], :position => blitzer, :number => 1 +i)
 end
 2.times do |i|
-  team.players.create(:name => names[5+i], :position => catcher, :number => 5 + i)
+  team.players.create(:name => names[4+i], :position => catcher, :number => 5 + i)
 end
 1.times do |i|
-  team.players.create(:name => names[7+i], :position => thrower, :number => 7 + i)
+  team.players.create(:name => names[6+i], :position => thrower, :number => 7 + i)
 end
 5.times do |i|
-  team.players.create(:name => names[8+i], :position => linewoman, :number => 8 + i)
+  team.players.create(:name => names[7+i], :position => linewoman, :number => 8 + i)
 end

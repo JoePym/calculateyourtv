@@ -52,12 +52,12 @@ team.roster = skaven
 team.save!
 team.players.create(:name => names[0], :position => rat_ogre, :number => 1)
 2.times do |i|
-  team.players.create(:name => names[1+ i], :position => blitzer, :number => 2+ i)
+  team.players.create(:name => names[1+i], :position => blitzer, :number => 2 + i)
 end
 2.times do |i|
-  team.players.create(:name => names[4+i], :position => gutter, :number => 5 + i)
+  team.players.create(:name => names[3+i], :position => gutter, :number => 4 + i)
 end
-team.players.create(:name => names[6], :position => thrower, :number => 7)
+team.players.create(:name => names[5], :position => thrower, :number => 6)
 5.times do |i|
-  team.players.create(:name => names[7+i], :position => lineman, :number => 8+ i)
+  team.players.create(:name => names[6+i], :position => lineman, :number => 7 + i)
 end

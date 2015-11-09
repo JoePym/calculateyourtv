@@ -4,7 +4,7 @@ slann = Roster.create(:name => "Slann", :reroll_cost => 50, :logo_path => "slann
 puts "adding positionals to Slann"
 krox = slann.positions.create(:name => "Kroxigor",
   :ma => 6, :st => 5, :ag => 1, :av => 9,
-  :default_skills => [ "Mighty Blow", "Bone-head", "Thick Skull", "Throw Team-Mate" , "Prehensile Tail"],
+  :default_skills => ["Loner" "Mighty Blow", "Bonehead", "Thick Skull", "Prehensile Tail"],
   :normal_skills => ["strength"], :double_skills => ["general", "passing", "agility"],
   :maximum => 1,:cost => 140)
 blitzer = slann.positions.create(:name => "Blitzer",

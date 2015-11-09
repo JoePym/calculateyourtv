@@ -35,5 +35,5 @@ names =[
   team.players.create(:name => names[i], :position => vampire, :number => 1 + i)
 end
 7.times do |i|
-  team.players.create(:name => names[6+i], :position => thrall, :number => 7+i)
+  team.players.create(:name => names[4+i], :position => thrall, :number => 5+i)
 end

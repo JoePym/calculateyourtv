@@ -1,4 +1,4 @@
-roster = Roster.create(:name => "Norse", :reroll_cost => 50, :logo_path => "norse_logo.png")
+roster = Roster.create(:name => "Norse", :reroll_cost => 60, :logo_path => "norse_logo.png")
 
 puts "adding positionals to Norse"
 troll = roster.positions.create(:name => "Snow Troll",
