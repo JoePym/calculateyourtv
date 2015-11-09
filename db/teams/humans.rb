@@ -53,8 +53,8 @@ team.players.create(:name => names[0], :position => ogre, :number => 1)
   team.players.create(:name => names[1+ i], :position => blitzer, :number => 2+ i)
 end
 1.times do |i|
-  team.players.create(:name => names[6+i], :position => thrower, :number => 7 + i)
+  team.players.create(:name => names[6+i], :position => thrower, :number => 6 + i)
 end
 5.times do |i|
-  team.players.create(:name => names[7+i], :position => lineman, :number => 8+ i)
+  team.players.create(:name => names[7+i], :position => lineman, :number => 7+ i)
 end
