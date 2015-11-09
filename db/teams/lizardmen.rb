@@ -4,7 +4,7 @@ lizardmen = Roster.create(:name => "Lizard-men", :reroll_cost => 60, :logo_path 
 puts "adding positionals to Lizards"
 krox = lizardmen.positions.create(:name => "Kroxigor",
   :ma => 6, :st => 5, :ag => 1, :av => 9,
-  :default_skills => [ "Mighty Blow", "Bone-head", "Thick Skull", "Throw Team-Mate" , "Prehensile Tail"],
+  :default_skills => [ "Loner", "Bonehead", "Mighty Blow", "Thick Skull", "Prehensile Tail"],
   :normal_skills => ["strength"], :double_skills => ["general", "passing", "agility"],
   :maximum => 1,:cost => 140)
 saurus = lizardmen.positions.create(:name => "Saurus",
@@ -14,7 +14,7 @@ saurus = lizardmen.positions.create(:name => "Saurus",
 skink = lizardmen.positions.create(:name => "Skink",
   :ma => 8, :st => 2, :ag => 3, :av => 7,
   :normal_skills => ["agility"], :double_skills => ["passing", "general", "strength"],
-  :default_skills => ["Dodge", "Stunty", "Right Stuff" ], :maximum => 16,:cost => 60, :journeyman_position => true)
+  :default_skills => ["Dodge", "Stunty"], :maximum => 16,:cost => 60, :journeyman_position => true)
 
 puts "Creating Lizardmen team"
 team = Team.create(:name => "Serpent's Tongue", :rerolls => 2, :tv => 980)
