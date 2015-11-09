@@ -24,7 +24,7 @@ goblin = orcs.positions.create(:name => "Goblin",
   :ma => 6, :st => 2, :ag => 3, :av => 7,
   :default_skills => ["Dodge", "Right Stuff", "Stunty"],
   :normal_skills => ["agility"], :double_skills => ["strength", "passing", "general"],
-  :maximum => 4,:cost => 70)
+  :maximum => 4,:cost => 40)
 lineman = orcs.positions.create(:name => "Lineman",
   :ma => 5, :st => 3, :ag => 3, :av => 9,
   :default_skills => [],
