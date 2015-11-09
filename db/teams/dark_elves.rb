@@ -51,8 +51,8 @@ team.save!
   team.players.create(:name => names[i], :position => blitzer, :number => 1 + i)
 end
 1.times do |i|
-  team.players.create(:name => names[7+i], :position => runner, :number => 5 + i)
+  team.players.create(:name => names[4+i], :position => runner, :number => 5 + i)
 end
 6.times do |i|
-  team.players.create(:name => names[8+i], :position => lineelf, :number => 6 + i)
+  team.players.create(:name => names[5+i], :position => lineelf, :number => 6 + i)
 end
