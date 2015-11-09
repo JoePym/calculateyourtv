@@ -22,7 +22,7 @@ lineelf = pro_elves.positions.create(:name => "Lineman",
   :maximum => 16,:cost => 60, :journeyman_position => true)
 
 puts "Creating Pro Elf team"
-team = Team.create(:name => "Lost Visiers", :rerolls => 2, :tv => 990)
+team = Team.create(:name => "Lost Visiers", :rerolls => 3, :tv => 990)
 names = [
 "Banelute",
 "Battlefish",
@@ -43,11 +43,11 @@ names = [
 team.roster = pro_elves
 team.save!
 2.times do |i|
-  team.players.create(:name => names[i], :position => blitzer, :number => i)
+  team.players.create(:name => names[i], :position => blitzer, :number => 1 + i)
 end
 2.times do |i|
   team.players.create(:name => names[2+i], :position => catcher, :number => 3 + i)
 end
 7.times do |i|
-  team.players.create(:name => names[8+i], :position => lineelf, :number => 8 + i)
+  team.players.create(:name => names[4+i], :position => lineelf, :number => 5 + i)
 end
