@@ -1,5 +1,5 @@
 puts "creating Chaos Dwarves"
-chaos_dwarves = Roster.create(:name => "Chaos Dwarves", :reroll_cost => 60, :logo_path => "chaos_dwarf_logo.png")
+chaos_dwarves = Roster.create(:name => "Chaos Dwarves", :reroll_cost => 70, :logo_path => "chaos_dwarf_logo.png")
 
 puts "adding positionals to Chaos Dwarves"
 hob = chaos_dwarves.positions.create(:name => "Hobgoblin",
@@ -18,7 +18,7 @@ bull = chaos_dwarves.positions.create(:name => "Bull Centaur",
 mino = chaos_dwarves.positions.create(:name => "Minotaur",
   :ma => 5, :st => 5, :ag => 2, :av => 8,
   :default_skills => ["Frenzy", "Mighty Blow", "Thick Skull", "Horns", "Loner", "Wild Animal"],
-  :normal_skills => ["strength", "mutation"], :double_skills => ["general", "passing", "agility"],
+  :normal_skills => ["strength"], :double_skills => ["general", "passing", "agility", "mutation"],
   :maximum => 1,:cost => 150)
 
 puts "Creating sample team"
@@ -40,11 +40,11 @@ names =[
 "Ronn",]
 #team.players.create(:name => names[0], :position => mino, :number => 1)
 2.times do |i|
-  team.players.create(:name => names[i ], :position => bull, :number => 1+ i)
+  team.players.create(:name => names[i], :position => bull, :number => 1+ i)
 end
 5.times do |i|
-  team.players.create(:name => names[i + 2], :position => cd, :number => 4+ i)
+  team.players.create(:name => names[2+ i], :position => cd, :number => 3+ i)
 end
 4.times do |i|
-  team.players.create(:name => names[i+7], :position => hob, :number => 7 + i)
+  team.players.create(:name => names[7+ i], :position => hob, :number => 8+ i)
 end
