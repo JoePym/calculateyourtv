@@ -3,7 +3,7 @@ humans = Roster.create(:name => "Humans", :reroll_cost => 50, :logo_path => "hum
 puts "adding positionals to Humans"
 ogre = humans.positions.create(:name => "Ogre",
   :ma => 5, :st => 5, :ag => 2, :av => 9,
-  :default_skills => ["Loner", "Mighty Blow", "Bonehead", "Thick Skull", "Throw Team Mate"],
+  :default_skills => ["Loner", "Mighty Blow", "Bonehead", "Thick Skull", "Throw Team-Mate"],
   :normal_skills => ["strength"], :double_skills => ["general", "passing", "agility"],
   :maximum => 1,:cost => 140)
 blitzer = humans.positions.create(:name => "Blitzer",
