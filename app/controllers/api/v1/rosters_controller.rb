@@ -1,14 +1,19 @@
 class Api::V1::RostersController < ApplicationController
-  if Rails.env == 'production'
-    caches_page :show, :index
-  end
 
   def index
-    render json: Roster.includes(team: :players).includes(:positions)
+    rosters = Roster.includes(team: :players).includes(:positions)
+    json = cache ['v1', rosters] do
+      render_to_string json: rosters
+    end
+    render json: rosters
   end
 
   def show
-    render json: Roster.includes(team: :players).find(params[:id])
+    roster = Roster.includes(team: :players).includes(:positions).find(params[:id])
+    json = cache ['v1', "rosters", roster] do
+      render_to_string json: roster
+    e
+    render json: json
   end
 
 end

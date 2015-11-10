@@ -1,10 +1,19 @@
 class Api::V1::SkillCategoriesController < ApplicationController
 
   def index
-    render json: SkillCategory.includes(:skills)
+    skill_categories = SkillCategory.includes(:skills)
+    json = cache ['v1', skill_categories] do
+      render_to_string json: skill_categories
+    end
+
+    render json: json
   end
 
   def show
-    render json: SkillCategory.includes(:skills).find(params[:id])
+    skill_category = SkillCategory.includes(:skills).find(params(:id))
+    json = cache ['v1', 'skill_categories', skill_category] do
+      render_to_string json: skill_category
+    end
+    render json: json
   end
 end

@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
-
 gem 'pg'
 
 # Use SCSS for stylesheets
@@ -29,10 +28,10 @@ gem 'actionpack-page_caching'
 # gem 'turbolinks'
 
 
-group :development do 
+group :development do
 	gem 'capistrano'
   gem 'capistrano-bundler', '~> 1.1.2'
-  gem 'capistrano-rails' 
+  gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
 end
 
