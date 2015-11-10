@@ -12,7 +12,7 @@ class Api::V1::RostersController < ApplicationController
     roster = Roster.includes(team: :players).includes(:positions).find(params[:id])
     json = cache ['v1', "rosters", roster] do
       render_to_string json: roster
-    e
+    end
     render json: json
   end
 
