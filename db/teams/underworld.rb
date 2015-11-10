@@ -1,4 +1,4 @@
-underworld = Roster.create(:name => "Under-world", :reroll_cost => 70, :logo_path => "underworld_logo.png")
+underworld = Roster.create(:name => "Underworld", :reroll_cost => 70, :logo_path => "underworld_logo.png")
 
 puts "adding positionals to Underworld"
 troll = underworld.positions.create(:name => "Warpstone Troll",

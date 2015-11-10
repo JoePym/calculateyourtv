@@ -1,5 +1,5 @@
 puts "creating Lizardmen"
-lizardmen = Roster.create(:name => "Lizard-men", :reroll_cost => 60, :logo_path => "lizardmen_logo.png")
+lizardmen = Roster.create(:name => "Lizardmen", :reroll_cost => 60, :logo_path => "lizardmen_logo.png")
 
 puts "adding positionals to Lizards"
 krox = lizardmen.positions.create(:name => "Kroxigor",

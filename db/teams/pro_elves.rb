@@ -1,4 +1,4 @@
-pro_elves = Roster.create(:name => "Pro Elves", :reroll_cost => 50, :logo_path => "pro_elf_logo.png")
+pro_elves = Roster.create(:name => "Elves", :reroll_cost => 50, :logo_path => "pro_elf_logo.png")
 
 puts "adding positionals to Dark Elves"
 catcher = pro_elves.positions.create(:name => "Catcher",
