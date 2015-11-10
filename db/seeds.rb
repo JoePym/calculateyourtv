@@ -10,7 +10,7 @@ skills = {
   mutation:  ["Big Hand", "Claw", "Claws", "Disturbing Presence", "Extra Arms", "Foul Appearance",
    "Horns", "Prehensile Tail", "Tentacles", "Two Heads", "Very Long Legs"],
   passing: ["Accurate", "Dump-Off", "Hail Mary Pass", "Leader", "Nerves of Steel", "Pass", "Safe Throw"],
-  extraordinary: ["Always Hungry", "Animosity", "Ball & Chain", "Blood Lust", "Bombadier", "Bone-head",
+  extraordinary: ["Always Hungry", "Animosity", "Ball & Chain", "Blood Lust", "Bombardier", "Bone-head",
    "Chainsaw", "Decay", "Fan Favourite", "Hypnotic Gaze", "Loner", "No Hands", "Nurgle's Rot", "Really Stupid",
    "Regeneration", "Right Stuff", "Secret Weapon", "Stab", "Stakes", "Stunty", "Take Root", "Throw Team-Mate",
    "Titchy", "Wild Animal"],

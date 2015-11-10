@@ -22,7 +22,7 @@ lineman = underworld.positions.create(:name => "Skaven Lineman",
   :maximum => 2,:cost => 50)
 goblin = underworld.positions.create(:name => "Underworld Goblin",
   :ma => 6, :st => 2, :ag => 3, :av => 7,
-  :default_skills => ["Dodge", "Stunty"],
+  :default_skills => ["Dodge", "Stunty", "Right Stuff"],
   :normal_skills => ["agility", "mutation"], :double_skills => ["strength", "passing", "general"],
   :maximum => 16,:cost => 40, :journeyman_position => true)
 
