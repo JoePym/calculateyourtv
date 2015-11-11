@@ -1,6 +1,10 @@
 {{#if view.isShowVisible}}
   <td>{{view.content.number}}</td>
-  <td>{{view.content.name}}</td>
+  {{#if view.content.position.is_star_player}}
+    <td>{{view.content.position.name}}</td>
+  {{else}}
+    <td>{{view.content.name}}</td>
+  {{/if}}
   <td>{{view.content.position.name}}</td>
   <td>{{view.content.ma}}</td>
   <td>{{view.content.st}}</td>
@@ -16,13 +20,19 @@
   </td>
   <td>{{view.content.cost}}</td>
   <td>
-    <a {{action "chooseSkillDialogue" target="view"}} data-toggle="modal" data-target="#modal">Manage Skills</a>
+    {{#unless view.content.position.is_star_player}}
+      <a {{action "chooseSkillDialogue" target="view"}} data-toggle="modal" data-target="#modal">Manage Skills</a>
+    {{/unless}}
     <a {{action "toggleVisibility" target="view"}}>Edit</a>
     <a {{action "removePlayer" target="view"}}>Delete</a>
   </td>
 {{else}}
   <td>{{view.content.number}}</td>
-  <td>{{input type="text" value=view.content.name}}</td>
+  {{#if view.content.position.is_star_player}}
+    <td>{{view.content.position.name}}</td>
+  {{else}}
+    <td>{{input type="text" value=view.content.name}}</td>
+  {{/if}}
   <td>
     {{view Ember.Select
        contentBinding=view.content.team.roster.positions

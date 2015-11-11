@@ -8,6 +8,7 @@ CalculateYourTV.Position = DS.Model.extend({
   cost: DS.attr(),
   journeyman_position: DS.attr(),
   maximum: DS.attr(),
+  is_star_player: DS.attr(),
   skills: DS.hasMany("skill"),
   normal_skills: DS.hasMany("skillCategory"),
   double_skills: DS.hasMany("skillCategory"),

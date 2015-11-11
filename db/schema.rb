@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131107180346) do
+ActiveRecord::Schema.define(version: 20151111222607) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 20131107180346) do
     t.integer  "maximum"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.boolean  "is_star_player",      default: false, null: false
   end
 
   create_table "positions_skills", force: true do |t|
