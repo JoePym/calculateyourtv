@@ -32,7 +32,6 @@ class Position < ActiveRecord::Base
   end
 
   def default_skills=(arr)
-    names = arr.map(&:titlecase)
-    self.skills << Skill.where(:name => names)
+    self.skills << Skill.where(:name => arr)
   end
 end

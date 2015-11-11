@@ -1,7 +1,7 @@
 class Api::V1::RostersController < ApplicationController
 
   def index
-    rosters = Roster.includes(team: :players).includes(:positions)
+    rosters = Roster.includes(team: :players).includes(:positions).order(:name)
     json = cache ['v1', rosters] do
       render_to_string json: rosters
     end
