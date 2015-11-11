@@ -29,5 +29,4 @@ end
 
 
 Dir["#{Rails.root}/db/teams/*.rb"].each{|s| load s }
-
-#now load the skills and categories
+load Rails.root.join('db', "star_players.rb")
