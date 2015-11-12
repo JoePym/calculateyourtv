@@ -45,6 +45,11 @@ names = [
 "Kruol",
 "Prourk",
 "Birz",
+"Smackdem",
+"Gitbash",
+"Gnork",
+"Flikka",
+"Reggish"
 ]
 team.roster = orcs
 team.save!

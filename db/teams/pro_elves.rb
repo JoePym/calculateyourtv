@@ -38,7 +38,8 @@ names = [
 "Warglow",
 "Wildseed",
 "Woodbeak",
-"Warpaw"
+"Warpaw",
+"Silverhammer"
 ]
 team.roster = pro_elves
 team.save!

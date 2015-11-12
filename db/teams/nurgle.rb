@@ -26,18 +26,24 @@ puts "Creating sample team"
 team = Team.create(:name => "Champions of Despair", :tv => 980, :rerolls => 2)
 team.roster = nurgle
 team.save!
-names =
-['Xrathedetsx',
-  'Korgon Plaguelord',
-  'Rlalth the Rotten',
-  'Lord Gorgeth',
-  'Mircosien the Bloody',
-  'Kord',
-  'Pus',
-  'Boil',
-  'Famine',
-  'Lone',
-  'Mordred']
+names = [
+  "Xrathedetsx",
+  "Korgon Plaguelord",
+  "Rlalth the Rotten",
+  "Lord Gorgeth",
+  "Mircosien the Bloody",
+  "Kord",
+  "Pus",
+  "Boil",
+  "Famine",
+  "Lone",
+  "Mordred",
+  "Dex The Decaying",
+  "Odor",
+  "Molt",
+  "Skare",
+  "Kaff"
+]
 team.players.create(:name => names[0], :position => bon, :number => 1)
 4.times do |i|
   team.players.create(:name => names[i+1], :position => nw, :number => 2+ i)

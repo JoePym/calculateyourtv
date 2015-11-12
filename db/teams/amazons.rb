@@ -24,7 +24,24 @@ linewoman = amazons.positions.create(:name => "Linewoman",
 
 puts "Creating amazon team"
 team = Team.create(:name => "Blades of Xixhuan", :rerolls => 3, :tv => 970)
-names = ["Imjal", "Jutaai","Anari","Tapuruai","Japjai","Caraoco","Jutacuara","Tapuruica","Araramu","Jutaucu",'Parau','Tauau','Apiiri','Padaucuara','Apiamu','Tamaau']
+names = [
+ "Imjal",
+ "Jutaai",
+ "Anari",
+ "Tapuruai",
+ "Japjai",
+ "Caraoco",
+ "Jutacuara",
+ "Tapuruica",
+ "Araramu",
+ "Jutaucu",
+ "Parau",
+ "Tauau",
+ "Apiiri",
+ "Padaucuara",
+ "Apiamu",
+ "Tamaau"
+ ]
 team.roster = amazons
 team.save!
 4.times do |i|

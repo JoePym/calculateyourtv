@@ -32,12 +32,17 @@ names =[
 "Fhakk Darkhead",
 "Kharzhakh Lighthammer",
 "Thargrakka Burnface",
-"Khanahk Burntears",
+"Khanahk Metaltears",
+"Zukkor Terrorfist",
 "Konk",
 "Bolg",
 "Delk",
 "Gokk",
-"Ronn",]
+"Ronn",
+"Bulgor",
+"Flonk",
+"Gromm",
+]
 #team.players.create(:name => names[0], :position => mino, :number => 1)
 2.times do |i|
   team.players.create(:name => names[i], :position => bull, :number => 1+ i)

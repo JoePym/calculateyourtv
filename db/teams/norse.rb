@@ -48,7 +48,8 @@ names = [
 "Ingemur",
 "Oskar",
 "Njall",
-"Ganger"
+"Ganger",
+"Smorebrod"
 ]
 team.roster = roster
 team.save!

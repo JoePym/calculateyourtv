@@ -31,7 +31,12 @@ names =[
 "Garkrox",
 "Ligoq",
 "Litenq",
-"Otta-ec"
+"Otta-ec",
+"Zavaletatl",
+"Kroq-Seph",
+"Chakax",
+"Quetzalex",
+"Cacasqa"
 ]
 1.times do |i|
   team.players.create(:name => names[i], :position => krox, :number => 1 + i)

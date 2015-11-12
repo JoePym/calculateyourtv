@@ -36,7 +36,12 @@ names =[
 "Bletch",
 "Amphibulus",
 "Bufonia",
-"Conan"
+"Conan",
+"Popocatepetl",
+"Cocohuay",
+"Montezuma",
+"Tomatl",
+"Wakahua"
 ]
 2.times do |i|
   team.players.create(:name => names[i], :position => blitzer, :number => 1 + i)

@@ -45,7 +45,8 @@ names = [
 "Tbibd Gravelsmasher",
 "Tek Keysmither",
 "Trirr Ironmolder",
-"Vucrid Godshunter"
+"Vucrid Godshunter",
+"Smori Silveranvil"
 ]
 team.roster = dwarves
 team.save!

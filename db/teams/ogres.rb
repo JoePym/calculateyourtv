@@ -29,7 +29,10 @@ names =[
 "Quad",
 "Gon",
 "Poth",
-"Iki"
+"Iki",
+"Splash",
+"Kiki",
+"Spid"
 ]
 4.times do |i|
   team.players.create(:name => names[i], :position => ogre, :number => 1 + i)

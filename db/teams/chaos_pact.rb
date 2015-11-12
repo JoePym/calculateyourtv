@@ -49,11 +49,15 @@ names =[
 "Tzeetch Quicktail",
 "Fetid Pirate",
 "Six Iron Charms",
-"Endless brand",
+"Endless Brand",
 "Havenbow",
 "Nine Evil Princes",
 "Breeze of Rubies",
-"Sword of the Glaciers"]
+"Sword of the Glaciers",
+"Devouring Hunger",
+"Pain Au Lait",
+"Destroyer of Worlds"
+]
 team.players.create(:name => names[0], :position => mino, :number => 1)
 team.players.create(:name => names[1], :position => ogre, :number => 2)
 team.players.create(:name => names[2], :position => troll, :number => 3)

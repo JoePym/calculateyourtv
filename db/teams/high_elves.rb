@@ -28,14 +28,18 @@ names = [
 "Malkor Swiftwing",
 "Amile Brightshock",
 "Lantel Winddancer",
-"Ulther Whitedragon  ",
+"Ulther Whitedragon",
 "Leonis Swangaze",
 "Sar Morraent Lionheart",
 "Othello Aegiswall",
 "Vamyr Vandrake",
 "Tragon Darkspike",
 "Naidi Warmhearth",
-"Kalten Hawkeye"
+"Kalten Hawkeye",
+"Mendriel Hardshield",
+"Loriand Quickstep",
+"Toman Falconview",
+"Severil Tigerclaw"
 ]
 team.roster = high_elves
 team.save!
