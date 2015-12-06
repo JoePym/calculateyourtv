@@ -31,7 +31,7 @@ class TeamGenerator
       skills = format_skills(player[:skills], position)
       cost = player[:cost]
       [ index.to_i + 1,
-        player[:name],
+        position.is_star_player ? position.name : player[:name],
         position.name,
         @plus_ma > 0 ? green(position.ma + @plus_ma) : position.ma.to_s,
         @plus_st > 0 ? green(position.st + @plus_st) : position.st.to_s,
@@ -71,12 +71,14 @@ class TeamGenerator
   end
 
   def format_skills(skills, position)
-    return "" unless skills.present?
+    skills = position.skills.map{|s| ['0', {name: s.name, skill_category: s.skill_category.id, basic: true}]} + Array(skills)
+    Rails.logger.debug skills.inspect
     skills.map do |index, skill|
       name = skill[:name]
       skill_type = name.downcase
       skill_type = "normal" if position.normal_skills.map(&:id).include?(skill[:skill_category].to_i)
       skill_type = "double" if position.double_skills.map(&:id).include?(skill[:skill_category].to_i)
+      skill_type = "" if skill[:basic] == true
       case skill_type
       when "normal"
         "<color rgb='#3A87AD'>#{name}</color>"
