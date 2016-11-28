@@ -16,7 +16,7 @@ thrower = skaven.positions.create(:name => "Thrower",
   :normal_skills => ["general", "passing"], :double_skills => ["strength", "agility", "mutation"],
   :default_skills => ["Pass", "Sure Hands"], :maximum => 2,:cost => 70)
 gutter = skaven.positions.create(:name => "Gutter Runner",
-  :ma => 9, :st => 2, :ag => 3, :av => 7,
+  :ma => 9, :st => 2, :ag => 4, :av => 7,
   :default_skills => ["Dodge"],
   :normal_skills => ["general", "agility"], :double_skills => ["strength", "passing", "mutation"],
   :maximum => 4,:cost => 80)
