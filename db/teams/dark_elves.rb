@@ -43,7 +43,8 @@ names = [
 "Ukenelat Shadowarcher",
 "Uzazuri Flameseeker",
 "Vonorxat Darkjewel",
-"Ynaroraz Mightymagus"
+"Ynaroraz Mightymagus",
+"Loriot Wordcaster"
 ]
 team.roster = dark_elves
 team.save!

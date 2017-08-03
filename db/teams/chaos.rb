@@ -21,7 +21,24 @@ puts "Creating sample team"
 team = Team.create(:name => "Darkscream Chosen", :tv => 1000, :rerolls => 3)
 team.roster = chaos
 team.save!
-names = ['Bashhunger The Shredder','Droolkill The Dissector','Evilblast The Hungry','Evildrool','Hungermaw The Blade','Sharpspawn','Smashblade The All-devouring','Smashgut','Warstrike The Dissector','Bentspawn','Charmcraze','Hungermouth','Madgut','Snaremouth The Regulator']
+names = [
+"Bashhunger The Shredder",
+"Droolkill The Dissector",
+"Evilblast The Hungry",
+"Evildrool",
+"Hungermaw The Blade",
+"Sharpspawn",
+"Smashblade The All-devouring",
+"Smashgut",
+"Warstrike The Dissector",
+"Bentspawn",
+"Charmcraze",
+"Hungermouth",
+"Madgut",
+"Snaremouth The Regulator",
+"Hork The Naughty",
+"Mordio The Insane"
+]
 4.times do |i|
   team.players.create(:name => names[i], :position => cw, :number => 1+ i)
 end

@@ -29,22 +29,22 @@ lineman = humans.positions.create(:name => "Lineman",
 puts "Creating Human team"
 team = Team.create(:name => "Altdorf Bluejays", :rerolls => 3, :tv => 970)
 names = [
-"Kurt",
-"Gernot",
+"Kurt Doppelschlag",
+"Gernot Totmacher",
 "Zacharias Dietmaringen",
-"Warmund",
-"Fridelinus Heidecker",
-"Luppolt Ardlich",
+"Warmund Forsch",
+"Fridelinus Heidegger",
+"Luppolt Arlich",
 "Steffan Fuchs",
-"Meffrid",
+"Meffrid Linksgeher",
 "Poppe Jeronymus",
-"Anders",
+"Anders Undicht",
 "Heineman Wanner",
 "Felkel Lank",
 "Wigandus Kant",
 "Wenzel Bahrenfahrer",
-"Adelmann",
-"Sweideger"
+"Adelmann Seelenhandler",
+"Soren Sweideger"
 ]
 team.roster = humans
 team.save!

@@ -37,7 +37,12 @@ names = [
 "Suiabund",
 "Lairildraug",
 "Thocaron",
-"Adanion"
+"Adanion",
+"Furiadon",
+"Velenolemal",
+"Lethadun",
+"Verandior",
+"Azuradil"
 ]
 team.roster = wood_elves
 team.save!

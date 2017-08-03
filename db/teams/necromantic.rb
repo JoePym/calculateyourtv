@@ -39,7 +39,12 @@ names = [
 "Dast",
 "Kale",
 "Mord",
-"Bile"
+"Bile",
+"Cursor",
+"Haunt",
+"Rotalot",
+"Jaxon",
+"Paler"
 ]
 team.roster = roster
 team.save!

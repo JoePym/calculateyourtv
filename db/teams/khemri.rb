@@ -35,7 +35,11 @@ names = [
 "Eqinyezo",
 "Eqimutemr",
 "Jefepiwa",
-"Uyur"
+"Uyur",
+"Gizah",
+"Thebteb",
+"Sheikitoff",
+"Sunborn"
 ]
 team.roster = khemri
 team.save!

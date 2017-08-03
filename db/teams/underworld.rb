@@ -35,7 +35,7 @@ names = [
 "Vrolg the Hook",
 "Vurk",
 "Rong",
-"Vrolg the Hook",
+"Raskk Razorback",
 "Rirag the Slayer",
 "Bilik",
 "Queek",
@@ -43,7 +43,10 @@ names = [
 "Polo",
 "Mog",
 "Nirk",
-"Kik"
+"Kik",
+"Flox",
+"Didda",
+"Gnagnag"
 ]
 team.roster = underworld
 team.save!

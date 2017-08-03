@@ -29,7 +29,10 @@ names =[
 "Ramung",
 "Philipps",
 "Sigric",
-"Gerunch"
+"Gerunch",
+"Toutebien",
+"Ferdinand",
+"Bernard"
 ]
 4.times do |i|
   team.players.create(:name => names[i], :position => vampire, :number => 1 + i)
